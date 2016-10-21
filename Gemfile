@@ -11,11 +11,15 @@ gem "jbuilder",     "2.4.1"
 gem "config",       "~> 1.3"
 gem "bcrypt",       "3.1.11"
 gem "faker",        "1.6.6"
+gem "bootstrap-sass",    "3.3.6"
+gem "font-awesome-sass", "~> 4.6.2"
+gem "ionicons-rails",    "~> 2.0"
+gem "animate-rails"
 
 group :development, :test do
   gem "sqlite3", "1.3.11"
   gem "byebug",  "9.0.0", platform: :mri
-  gem "pry",          "~> 0.10.4"
+  gem "pry",     "~> 0.10.4"
 end
 
 group :development do

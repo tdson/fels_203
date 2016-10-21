@@ -1,23 +1,28 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t 'hello'
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t('hello') %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# To learn more, please read the Rails Internationalization guide
-# available at http://guides.rubyonrails.org/i18n.html.
-
 en:
   hello: "Hello world"
+  layouts:
+    application:
+      base_title: "E-Learning"
+    header:
+      logo_alt: "E-Learning"
+      link_home: "Home"
+      link_about: "About"
+      link_contact: "Contact"
+      link_sign_in: "Sign in"
+      link_data_toggle: "Data toggle"
+    footer:
+      copyright: "2016. Design and Developed by"
+      author_name: "Son Tran"
+  static_pages:
+    index:
+      txt_welcome: "Well come to E-Learning System"
+      txt_greeting: "Are you ready to learn new words?"
+      btn_sign_in: "Sign In"
+      header_about: "About us"
+      txt_about: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        Error, adipisci voluptatum repudiandae, natus impedit repellat aut
+        officia illum at assumenda iusto reiciendis placeat. Temporibus, vero."
+      txt_sign_up: "So what do you think?"
+      txt_info: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        Nobis, possimus commodi, fugiat magnam temporibus vero mani recusandae?"
+      btn_sign_up: "Sign Up Now"

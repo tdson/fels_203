@@ -1,0 +1,26 @@
+<footer id="footer">
+  <div class="container">
+    <div class="col-md-8">
+      <p class="copyright">
+        &copy;<%= t ".copyright" %>
+        <strong><%= link_to t(".author_name"), "#" %></strong>
+      </p>
+    </div>
+    <div class="col-md-4">
+      <ul class="social">
+        <li>
+          <%= link_to Settings.AUTHOR_FB, class: "Facebook",
+            target: "_blank" do %>
+            <i class="fa fa-facebook-official"></i>
+          <% end %>
+        </li>
+        <li>
+          <%= link_to Settings.GITHUB_REPO, class: "Github",
+            target: "_blank" do %>
+            <i class="fa fa-github"></i>
+          <% end %>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
