@@ -6,14 +6,17 @@
         alt: category.name, title: category.name %>
       <div class="overlay" title="<%= category.name %>">
         <div class="buttons">
-          <%= link_to t(".btn_start"), category, class: "fancybox",
-            rel: "gallery" %>
+          <%= link_to t(".btn_start"), category_lessons_path(category.id),
+            method: :post, class: "fancybox", rel: "gallery",
+            data: {confirm: t(".confirm_message", category: category.name)} %>
         </div>
       </div>
     </div>
     <figcaption>
       <h4>
-        <%= link_to category.name, category, class: "fancybox",
+        <%= link_to category.name.first(Settings.limit_category_name),
+          category_lessons_path(category.id), method: :post, class: "fancybox",
+          data: {confirm: t(".confirm_message", category: category.name)},
           rel: "gallery" %>
       </h4>
     </figcaption>
