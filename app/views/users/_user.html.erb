@@ -1,0 +1,12 @@
+<li>
+  <%= link_to user do %>
+    <%= avatar_for user, size: Settings.avatar_medium %>
+  <% end %>
+  <div class="info">
+    <h4><%= link_to user.name, user %></h4>
+    <span>
+      <%= t ".join_date" %>
+      <%= l user.created_at, format: :date_format %>
+    </span>
+  </div>
+</li>

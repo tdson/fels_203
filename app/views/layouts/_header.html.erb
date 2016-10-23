@@ -21,7 +21,7 @@
           <li><%= link_to t(".link_contact"), "#" %></li>
           <% if logged_in? %>
             <li><%= link_to t(".link_word_list"), "#" %></li>
-            <li><%= link_to t(".link_members"), "#" %></li>
+            <li><%= link_to t(".link_members"), users_path %></li>
             <li class="dropdown">
               <%= link_to current_user, class: "dropdown-toggle",
                 data: {toggle: "dropdown"} do %>
