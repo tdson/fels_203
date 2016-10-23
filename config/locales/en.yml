@@ -12,9 +12,26 @@ en:
       link_contact: "Contact"
       link_sign_in: "Sign in"
       link_data_toggle: "Data toggle"
+      link_word_list: "Word list"
+      link_members: "Members"
+      link_profile: "Profile"
+      link_settings: "Settings"
+      link_admin_cp: "Admin CP"
+      link_log_out: "Log out"
     footer:
       copyright: "2016. Design and Developed by"
       author_name: "Son Tran"
+    signin_modal:
+      header: "Sign In"
+      holder_email: "Email"
+      holder_password: "Password"
+      btn_sign_up: "Sign Up"
+      btn_sign_in: "Sign In"
+      lb_or: "Or"
+      btn_sign_in_fb: "Sign in with facebook account"
+      btn_sign_in_gp: "Sign in with Google+ account"
+      btn_sign_in_tw: "Sign in with Twitter account"
+      link_forget_password: "Forgot password?"
   static_pages:
     index:
       txt_welcome: "Well come to E-Learning System"
@@ -45,3 +62,9 @@ en:
     error_messages:
       message: "The form contains"
       error: "error"
+  sessions:
+    create:
+      log_in_fails: "Invalid email or password!"
+  application:
+    logged_in_user:
+      warning_login: "Please login to continue!"

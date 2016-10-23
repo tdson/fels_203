@@ -19,9 +19,40 @@
           <li><%= link_to t(".link_home"), guest_index_url %></li>
           <li><%= link_to t(".link_about"), "#about" %></li>
           <li><%= link_to t(".link_contact"), "#" %></li>
-          <li><%= link_to t(".link_sign_in"), "#", data: {toggle: "modal",
-            target: "#signin_modal"} %>
-          </li>
+          <% if logged_in? %>
+            <li><%= link_to t(".link_word_list"), "#" %></li>
+            <li><%= link_to t(".link_members"), "#" %></li>
+            <li class="dropdown">
+              <%= link_to current_user, class: "dropdown-toggle",
+                data: {toggle: "dropdown"} do %>
+                <%= current_user.name %> <span class="caret"></span>
+              <% end %>
+              <div class="dropdown-menu">
+                  <ul>
+                    <li>
+                      <%= link_to t(".link_profile"), user_path(current_user) %>
+                    </li>
+                    <li>
+                      <%= link_to t(".link_settings"),
+                        edit_user_path(current_user) %>
+                    </li>
+                    <% if admin? %>
+                      <li class="divider"></li>
+                      <li><%= link_to t(".link_admin_cp"), "#" %></li>
+                    <% end %>
+                    <li class="divider"></li>
+                    <li>
+                      <%= link_to t(".link_log_out"), logout_path,
+                        method: :delete %>
+                    </li>
+                  </ul>
+              </div>
+            </li>
+          <% else %>
+            <li><%= link_to t(".link_sign_in"), "#",
+              data: {toggle: "modal", target: "#signin_modal"} %>
+            </li>
+          <% end %>
         </ul>
       </div>
     </nav>

@@ -1100,7 +1100,6 @@ form .btn-send {
   background: #02bdd5;
 }
 #sign_in, #sign_up {
-  margin-top: 15px;
   width: 48%
 }
 #sign_in {
@@ -1152,6 +1151,7 @@ h5 {
 h5.line-back {
   position: relative;
   z-index: 1;
+  margin-top: 20px;
   &:before {
     border-top: 1px solid #dfdfdf;
     content:'';
