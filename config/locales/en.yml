@@ -58,6 +58,12 @@ en:
       lb_password_confirmation: "password confirmation"
     create:
       success: "Your account has been create successfully!"
+    index:
+      title: "Members"
+      header: "All Members"
+      warning_login: "Login to see member list!"
+    user:
+      join_date: "Join date:"
   shared:
     error_messages:
       message: "The form contains"
