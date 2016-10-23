@@ -1,2 +1,3 @@
 AUTHOR_FB: "https://facebook.com/sontran.ds"
 GITHUB_REPO: "https://github.com/tdson/fels_203"
+MESSAGE_TYPES: {success: "success", danger: "danger", info: "info", warning: "warning"}

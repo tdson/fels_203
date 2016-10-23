@@ -1,5 +1,7 @@
 en:
   hello: "Hello world"
+  entities:
+    close: "&times;"
   layouts:
     application:
       base_title: "E-Learning"
@@ -26,3 +28,20 @@ en:
       txt_info: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.
         Nobis, possimus commodi, fugiat magnam temporibus vero mani recusandae?"
       btn_sign_up: "Sign Up Now"
+  users:
+    new:
+      title: "Sign Up"
+    form:
+      header: "Sign Up"
+      btn_create: "Create my account"
+      btn_update: "Save changes"
+      lb_name: "full name"
+      lb_email: "email"
+      lb_password: "password"
+      lb_password_confirmation: "password confirmation"
+    create:
+      success: "Your account has been create successfully!"
+  shared:
+    error_messages:
+      message: "The form contains"
+      error: "error"

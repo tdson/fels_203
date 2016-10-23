@@ -1166,3 +1166,41 @@ h5.line-back {
     padding: 0 15px;
   }
 }
+.new_user {
+  .form-control {
+    margin-bottom: 15px;
+  }
+}
+#hero-area {
+  padding: 150px 0 310px 0;
+  form {
+    color: #333;
+  }
+}
+#error_explanation {
+  ul {
+    padding-left: 20px;
+  }
+  li {
+    list-style: circle;
+  }
+}
+.messages_container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 40%;
+  height: auto;
+  transform: translate(-50%, -50%);
+  z-index: 99999;
+  opacity: 0.9;
+  .fa-4x {
+    vertical-align: middle;
+  }
+  span {
+    margin-left: 10px;
+  }
+}
+.messages_container:hover {
+  opacity: 1;
+}
