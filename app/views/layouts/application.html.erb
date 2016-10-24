@@ -12,7 +12,14 @@
   <body>
     <%= render "layouts/header" %>
     <%= render "shared/common_messages" %>
-    <%= yield %>
+    <% if logged_in? %>
+      <div class="container">
+        <%= yield %>
+      </div>
+    <% else %>
+      <%= yield %>
+      <%= render "layouts/signin_modal" %>
+    <% end %>
     <%= render "layouts/footer" %>
   </body>
 </html>

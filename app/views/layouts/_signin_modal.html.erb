@@ -1,0 +1,52 @@
+<div class="modal fade" id="signin_modal" role="dialog">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">
+          &times;
+        </button>
+        <h4 class="subtitle wow fadeInDown text-center"
+          data-wow-duration="500ms" data-wow-delay=".3s"><%= t ".header" %></h4>
+      </div>
+      <div class="modal-body">
+        <div class="signin-form">
+          <%= form_for :session, url: login_path, id: "signin-form" do |f| %>
+            <div class="form-group wow fadeInDown">
+              <%= f.email_field :email, placeholder: t(".holder_email"),
+                class: "form-control" %>
+            </div>
+            <div class="form-group wow fadeInDown">
+              <%= f.password_field :password, class: "form-control",
+                placeholder: t(".holder_password") %>
+            </div>
+            <div id="submit" class="wow fadeInDown">
+              <%= f.submit t(".btn_sign_in"), class: "btn btn-default btn-send",
+                id: "sign_in" %>
+            </div>
+            <div id="" class="wow fadeInDown">
+              <%= link_to t(".btn_sign_up"), signup_url,
+                class: "btn btn-default btn-send", id: "sign_up" %>
+            </div>
+          <% end %>
+          <h5 class="line-back"><span><%= t ".lb_or" %></span></h5>
+          <button class="btn btn-default btn-social-login btn-fb">
+            <i class="fa fa-facebook-square"></i>
+            <span class="btn-text"><%= t ".btn_sign_in_fb" %></span>
+          </button>
+          <button class="btn btn-default btn-social-login btn-gp">
+            <i class="fa fa-google-plus-square"></i>
+            <span class="btn-text"><%= t ".btn_sign_in_gp" %></span>
+          </button>
+          <button class="btn btn-default btn-social-login btn-tw">
+            <i class="fa fa-twitter-square"></i>
+            <span class="btn-text"><%= t ".btn_sign_in_tw" %></span>
+          </button>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <%= link_to t(".link_forget_password"), "#",
+          class: "pull-right link-forgot-pass" %>
+      </div>
+    </div>
+  </div>
+</div>
