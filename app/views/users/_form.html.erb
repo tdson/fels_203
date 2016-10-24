@@ -1,0 +1,20 @@
+<%= form_for @user do |f| %>
+  <h1 class="text-center"><%= t ".header" %></h1>
+  <%= render "shared/error_messages", object: f.object %>
+  <%= f.label t ".lb_name" %>
+  <%= f.text_field :name, class: "form-control" %>
+
+  <%= f.label t ".lb_email" %>
+  <%= f.email_field :email, class: "form-control" %>
+
+  <%= f.label t ".lb_password" %>
+  <%= f.password_field :password, class: "form-control" %>
+
+  <%= f.label t ".lb_password_confirmation" %>
+  <%= f.password_field :password_confirmation, class: "form-control" %>
+
+  <div class="text-center">
+    <%= f.submit action_name == :new || :create ? t(".btn_create") :
+      t(".btn_update"), class: "btn btn-primary" %>
+  </div>
+<% end %>

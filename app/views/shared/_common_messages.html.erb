@@ -1,0 +1,10 @@
+<div class="container messages_container">
+  <% flash.each do |message_type, message| %>
+    <div class="alert alert-<%= message_type %> alert-auto-hide">
+      <%= link_to t("entities.close").html_safe, "#", class: "close",
+        data: {dismiss: "alert"} %>
+      <i class="fa fa-4x <%= message_fa_class message_type %>"></i>
+      <span><%= message %></span>
+    </div>
+  <% end %>
+</div>

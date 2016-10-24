@@ -13,5 +13,6 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
-//= require_tree .
+//= require cable
 //= require bootstrap
+//= require auto_hide_alert
