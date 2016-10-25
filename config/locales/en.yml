@@ -21,6 +21,7 @@ en:
       link_settings: "Settings"
       link_admin_cp: "Admin CP"
       link_log_out: "Log out"
+      link_lesson: "Lesson"
     footer:
       copyright: "2016. Design and Developed by"
       author_name: "Son Tran"
@@ -77,3 +78,10 @@ en:
   application:
     logged_in_user:
       warning_login: "Please login to continue!"
+  categories:
+    index:
+      title: "Lessons by category"
+      header: "Lessons by category"
+      warning_login: "Please log in to continue."
+    category:
+      btn_start: "Start"

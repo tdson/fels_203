@@ -363,8 +363,9 @@ figure .overlay:hover a {
 }
 figure .buttons {
   position: absolute;
-  top: 45%;
-  left: 24%;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 figure figcaption {
   padding: 20px 25px;
@@ -1205,7 +1206,7 @@ h5.line-back {
   opacity: 1;
 }
 .main-content {
-  padding-top: 120px;
+  padding-top: 92px;
 }
 .avatar {
   float: left;
@@ -1221,4 +1222,13 @@ h5.line-back {
     padding: 0;
     padding-left: 120px;
   }
+}
+.works {
+  padding-top: 20px;
+}
+.categories-wrapper {
+  padding: 0 20px;
+}
+.main-content {
+  background: #fcfcfc;
 }
