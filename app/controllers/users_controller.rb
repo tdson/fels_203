@@ -1,5 +1,11 @@
 class UsersController < ApplicationController
   before_action :not_logged_in, only: [:new, :create]
+  before_action :logged_in_user, only: :index
+
+  def index
+    @users = User.order_by_name.paginate page: params[:page],
+      per_page: Settings.user_per_page
+  end
 
   def new
     @user = User.new

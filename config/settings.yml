@@ -1,3 +1,7 @@
 AUTHOR_FB: "https://facebook.com/sontran.ds"
 GITHUB_REPO: "https://github.com/tdson/fels_203"
 MESSAGE_TYPES: {success: "success", danger: "danger", info: "info", warning: "warning"}
+user_per_page: 30
+avatar_default: "default_avatar.png"
+avatar_default_size: 80
+avatar_medium: 100

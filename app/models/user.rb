@@ -19,6 +19,8 @@ class User < ApplicationRecord
   validates :password, length: {minimum: 6}, presence: true, allow_nil: true
   before_save {email.downcase!}
 
+  scope :order_by_name, ->{order :name}
+
   class << self
     def digest string
       cost = ActiveModel::SecurePassword.min_cost ? BCrypt::Engine::MIN_COST :
@@ -47,5 +49,9 @@ class User < ApplicationRecord
 
   def admin?
     self.is_admin?
+  end
+
+  def avatar_path
+    self.avatar? ? self.avatar.url : Settings.avatar_default
   end
 end

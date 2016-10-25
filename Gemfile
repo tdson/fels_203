@@ -15,6 +15,7 @@ gem "bootstrap-sass",    "3.3.6"
 gem "font-awesome-sass", "~> 4.6.2"
 gem "ionicons-rails",    "~> 2.0"
 gem "animate-rails"
+gem "will_paginate", "~> 3.1", ">= 3.1.5"
 
 group :development, :test do
   gem "sqlite3", "1.3.11"

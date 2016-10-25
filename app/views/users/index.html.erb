@@ -1,0 +1,10 @@
+<% provide :title, t(".title") %>
+<div class="col-md-5 col-md-offset-3 well">
+  <h1 class="text-center"><%= t ".header" %></h1>
+  <ul class="users">
+    <%= render @users %>
+  </ul>
+  <div class="text-center">
+    <%= will_paginate %>
+  </div>
+</div>
