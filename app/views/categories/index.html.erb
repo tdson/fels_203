@@ -1,0 +1,18 @@
+<% provide :title, t(".title") %>
+<section id="works" class="works">
+  <div class="categories-wrapper">
+    <div class="section-heading">
+      <h1 class="title wow fadeInDown" data-wow-delay=".3s">
+        <%= t ".header" %>
+      </h1>
+    </div>
+    <div class="row">
+      <ul>
+        <%= render @categories %>
+      </ul>
+    </div>
+    <div class="text-center">
+      <%= will_paginate %>
+    </div>
+  </div>
+</section>
