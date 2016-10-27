@@ -1,4 +1,11 @@
 Rails.application.routes.draw do
+  namespace :admin do
+    root "words#index"
+    resources :categories, except: :update
+    resources :words, only: :index
+    resources :users, only: :index
+  end
+
   root "static_pages#index"
   get "/index", to: "static_pages#index", as: "guest_index"
   get "/signup", to: "users#new"

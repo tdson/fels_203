@@ -3,6 +3,7 @@ en:
   time:
     formats:
       date_format: "%d-%m-%Y"
+      date_time_format: "%H:%m:%S %d-%m-%Y"
   entities:
     close: "&times;"
   layouts:
@@ -99,3 +100,29 @@ en:
     show:
       title: "Result"
       scores: "Scores: %{scores}"
+  admin:
+    search_holder: "Search"
+    load_fails:
+      category: "Category not found!"
+    delete:
+      success: "%{resource} has been deleted!"
+      fails: "Delete %{resource} unsuccessful!"
+    delete_confirmation: "Delete %{resource} #%{number}?"
+    btn_edit_title: "Edit this %{resource}"
+    btn_delete_title: "Delete this %{resource}"
+    layouts:
+      left_panel:
+        header: "Managements"
+        categories: "Categories"
+        users: "Users"
+        words: "Words"
+    categories:
+      index:
+        title: "Categories"
+        header: "All Categories"
+        name: "Categories name"
+        image: "Thumbnail"
+        time: "Time"
+        option: "Options"
+        btn_add_new: "Add Category"
+        id: "ID"
