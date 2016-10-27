@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161020153642) do
+ActiveRecord::Schema.define(version: 20161025030243) do
 
   create_table "activities", force: :cascade do |t|
     t.integer  "user_id"
@@ -32,8 +32,9 @@ ActiveRecord::Schema.define(version: 20161020153642) do
     t.integer  "user_id"
     t.integer  "category_id"
     t.integer  "scores"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
+    t.boolean  "is_finished", default: false
     t.index ["category_id"], name: "index_lessons_on_category_id"
     t.index ["user_id"], name: "index_lessons_on_user_id"
   end

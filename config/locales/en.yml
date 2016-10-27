@@ -85,3 +85,17 @@ en:
       warning_login: "Please log in to continue."
     category:
       btn_start: "Start"
+      confirm_message: "Press OK to start a lesson of \"%{category}\"."
+  lessons:
+    load_fails: "Category or lesson not found."
+    create:
+      fails: "Cannot start lesson, try later!"
+      not_enough_word: "Sorry, not enough words to start a lesson, try later!"
+    edit:
+      btn_submit: "Submit"
+    update:
+      warning: "Something went wrong! Canot show your score right now."
+      fails: "Submit unsuccessful, try later!"
+    show:
+      title: "Result"
+      scores: "Scores: %{scores}"
