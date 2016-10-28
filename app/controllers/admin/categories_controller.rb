@@ -4,8 +4,19 @@ class Admin::CategoriesController < ApplicationController
   before_action :load_category, only: :destroy
 
   def index
-    @categories = Category.search_name(params[:q]).newest
+    @categories = Category.includes(:words).search_name(params[:q]).newest
       .paginate page: params[:page], per_page: Settings.admin.category_per_page
+    @category = Category.new
+  end
+
+  def create
+    @category = Category.create category_params
+    if @category.save
+      flash[:success] = t ".success"
+    else
+      flash[:danger] = t ".fails"
+    end
+    redirect_to admin_categories_path
   end
 
   def destroy
@@ -24,5 +35,9 @@ class Admin::CategoriesController < ApplicationController
       flash[:danger] = t "admin.load_fails.category"
       redirect_to admin_categories_path
     end
+  end
+
+  def category_params
+    params.require(:category).permit :name, :image
   end
 end

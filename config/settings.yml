@@ -11,3 +11,5 @@ limit_category_name: 40
 word_per_lesson: 5
 admin:
   category_per_page: 20
+  image_accepted_formats: "image/jpeg,image/gif,image/png"
+  resize_image: 400
