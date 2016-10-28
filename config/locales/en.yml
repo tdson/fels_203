@@ -99,7 +99,8 @@ en:
       fails: "Submit unsuccessful, try later!"
     show:
       title: "Result"
-      scores: "Scores: %{scores}"
+      scores: "Scores:"
+      total_time: "Total time:"
   admin:
     search_holder: "Search"
     load_fails:

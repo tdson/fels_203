@@ -1271,3 +1271,23 @@ tr {
 #admin_search {
   margin-bottom: 20px;
 }
+.correct-result {
+  border-color: green;
+}
+.wrong-result {
+  border-color: red;
+}
+.correct-meaning {
+  background-color: yellow;
+}
+.text-red {
+  color: red;
+  font-weight: bold;
+}
+.text-blue {
+  color: blue;
+  font-weight: bold;
+}
+.results {
+  margin-bottom: 50px;
+}
