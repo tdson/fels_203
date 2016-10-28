@@ -16,7 +16,7 @@ class LessonsController < ApplicationController
   end
 
   def edit
-    @results = @lesson.results.includes :word, :meaning
+    @results = @lesson.results.includes word: :meanings
   end
 
   def update
@@ -34,7 +34,7 @@ class LessonsController < ApplicationController
   end
 
   def show
-    @results = @lesson.results.includes :word, :meaning
+    @results = @lesson.results.includes word: :meanings
     @scores = @lesson.scores || get_scores
   end
 
