@@ -9,3 +9,5 @@ category_per_page: 6
 category_default_thumbnail: "default_category.jpg"
 limit_category_name: 40
 word_per_lesson: 5
+admin:
+  category_per_page: 20

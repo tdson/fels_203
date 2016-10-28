@@ -6,7 +6,6 @@ class Result < ApplicationRecord
   delegate :user_id, to: :lesson
 
   scope :correct_meanings, ->do
-    joins(:meaning)
-      .where "meanings.is_correct = ?", true
+    joins(:meaning).where "meanings.is_correct = ?", true
   end
 end

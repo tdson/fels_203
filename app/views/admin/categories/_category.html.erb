@@ -1,0 +1,25 @@
+<% @categories.each do |category| %>
+  <tr>
+    <td><%= category.id %></td>
+    <td><%= category.name %></td>
+    <td class="text-center">
+      <%= image_tag category_image(category),
+        class: "img-responsive small-thumbnail center-block" %>
+    </td>
+    <td><%= l category.created_at, format: :date_time_format %></td>
+    <td class="text-center">
+      <%= link_to  edit_admin_category_path(category.id),
+        class: "btn btn-warning btn-xs btn-option",
+        title: t("admin.btn_edit_title", resource: :category) do %>
+        <i class="fa fa-edit"></i>
+      <% end %>
+      <%= link_to admin_category_path(category.id), method: :delete,
+        class: "btn btn-danger btn-xs btn-option",
+        title: t("admin.btn_delete_title", resource: :category),
+        data: {confirm: t("admin.delete_confirmation",
+        resource: :category, number: category.id)} do %>
+        <i class="fa fa-trash"></i>
+      <% end %>
+    </td>
+  </tr>
+<% end %>

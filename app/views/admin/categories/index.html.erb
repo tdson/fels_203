@@ -1,0 +1,38 @@
+<% provide :title, t(".title") %>
+<div class="wrapper">
+  <%= render "admin/layouts/left_panel" %>
+  <div class="col-md-9 col-sm-12">
+    <h1 class="admin-header">
+      <%= t ".header" %>
+      <span class="pull-right">
+        <%= link_to new_admin_category_path, class: "btn btn-primary" do %>
+          <i class="fa fa-cloud-upload"></i>
+          <%= t ".btn_add_new" %>
+        <% end %>
+      </span>
+    </h1>
+    <div class="col-md-5 col-md-offset-7">
+      <%= form_tag admin_categories_path, method: :get, id: "admin_search",
+        class: "row" do %>
+        <%= render "admin/shared/search_form" %>
+      <% end %>
+    </div>
+    <table id="data-table" class="table table-striped">
+      <thead>
+        <tr>
+          <th class="text-center"><%= t ".id" %></th>
+          <th class="text-center"><%= t ".name" %></th>
+          <th class="text-center"><%= t ".image" %></th>
+          <th class="text-center"><%= t ".time" %></th>
+          <th class="text-center"><%= t ".option" %></th>
+        </tr>
+      </thead>
+      <tbody id="result_search">
+        <%= render "category" %>
+      </tbody>
+    </table>
+    <div class="pull-right">
+      <%= will_paginate %>
+    </div>
+  </div>
+</div>
