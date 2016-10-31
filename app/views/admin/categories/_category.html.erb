@@ -1,7 +1,7 @@
 <% @categories.each do |category| %>
   <tr>
     <td><%= category.id %></td>
-    <td><%= category.name %></td>
+    <td><%= link_to category.name, categories_path(q: category.name) %></td>
     <td class="text-right"><%= category.words.count %></td>
     <td class="text-center">
       <%= image_tag category_image(category),

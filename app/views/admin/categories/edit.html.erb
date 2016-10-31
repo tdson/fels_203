@@ -1,0 +1,11 @@
+<% provide :title, t(".title", category: @category.name) %>
+<% provide :button_text, t(".btn_save") %>
+<div class="wrapper">
+  <%= render "admin/layouts/left_panel" %>
+  <div class="col-md-9 col-sm-12">
+    <h1 class="admin-header"><%= t ".header", name: @category.name %></h1>
+    <div class="col-md-8 col-md-offset-2">
+      <%= render "category_modal" %>
+    </div>
+  </div>
+</div>
