@@ -1,0 +1,19 @@
+<%= form_for [:admin, @category], html: {multipart: true} do |f| %>
+  <div class="form-group">
+    <%= f.label t(".lb_name") %>
+    <%= f.text_field :name, class: "form-control",
+      placeholder: t(".name_placeholder") %>
+  </div>
+  <div class="form-group">
+    <%= f.label t(".lb_image") %>
+    <span class="text-blue">
+      <small>
+        <%= t ".img_formats", formats: Settings.admin.image_accepted_formats %>
+      </small>
+    </span>
+    <%= f.file_field :image, accept: Settings.image_accepted_formats %>
+  </div>
+  <div class="modal-footer">
+    <%= f.submit t(".btn_submit"), class: "btn btn-primary" %>
+  </div>
+<% end %>
