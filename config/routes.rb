@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   namespace :admin do
     root "words#index"
-    resources :categories, except: :update
+    resources :categories
     resources :words, only: :index
     resources :users, only: :index
   end

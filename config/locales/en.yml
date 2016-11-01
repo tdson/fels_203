@@ -129,12 +129,19 @@ en:
         btn_add_new: "Add Category"
         id: "ID"
         modal_header: "Add New Category"
+        btn_submit: "Create"
       category_modal:
         name_placeholder: "Category name"
-        btn_submit: "Create"
         lb_image: "Image: "
         lb_name: "Name:"
         img_formats: "Only accept these formats: JPG/JPEG, PNG, GIF."
       create:
         success: "Category created!"
         fails: "Create unsuccessful, try later!"
+      edit:
+        btn_save: "Save changes"
+        title: "Edit %{category}"
+        header: "Edit category: %{name}"
+      update:
+        success: "Category updated!"
+        fails: "Update unsuccessful!"
