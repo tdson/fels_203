@@ -5,6 +5,7 @@ user_per_page: 30
 avatar_default: "default_avatar.png"
 avatar_default_size: 80
 avatar_medium: 100
+avatar_large: 120
 category_per_page: 6
 category_default_thumbnail: "default_category.jpg"
 limit_category_name: 40

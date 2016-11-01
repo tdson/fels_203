@@ -1,0 +1,21 @@
+<div class="left-block">
+  <%= link_to @user do %>
+    <%= avatar_for @user, size: Settings.avatar_large %>
+  <% end %>
+  <button class="btn btn-sm btn-primary"><%= t ".btn_follow" %></button>
+</div>
+<div class="user_detail">
+  <h2><%= link_to @user.name, @user %></h2>
+  <h5 class="text-left"><%= @user.email %></h5>
+  <span>
+    <%= t ".join_date" %> <%= l @user.created_at, format: :date_format %>
+  </span>
+  <div class="stats">
+    <ul>
+      <li><%= pluralize @user_result_ids.count, t(".lesson_count") %></li>
+      <li><%= t ".words_remembered", number: @learned_words.count %></li>
+      <li><%= pluralize @followers_size, t(".follower_count") %></li>
+      <li><%= pluralize @following_size, t(".following_count") %></li>
+    </ul>
+  </div>
+</div>

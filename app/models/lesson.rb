@@ -16,6 +16,8 @@ class Lesson < ApplicationRecord
     reject_if: proc {|attributes| attributes[:meaning_id].blank?},
     allow_destroy: true
 
+  scope :result_ids, ->{joins(:results).pluck "results.id"}
+
   def set_scores scores
     self.update_attributes scores: scores
   end

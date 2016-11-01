@@ -1308,3 +1308,25 @@ tr {
 .category-thumbnail {
   width: 100%;
 }
+.user_detail {
+  padding: 0;
+  padding-left: 140px;
+  h2 {
+    margin-top: 0px;
+  }
+  ul li {
+    list-style: circle;
+  }
+  ul {
+    padding-left: 20px;
+  }
+}
+.left-block {
+  height: 150px;
+  width: 120px;
+  float: left;
+  text-align: center;
+  button {
+    margin: 15px 0;
+  }
+}
