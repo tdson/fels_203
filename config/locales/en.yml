@@ -117,6 +117,7 @@ en:
     search_holder: "Search"
     load_fails:
       category: "Category not found!"
+      user: "User not found!"
     delete:
       success: "%{resource} has been deleted!"
       fails: "Delete %{resource} unsuccessful!"
@@ -157,3 +158,15 @@ en:
       update:
         success: "Category updated!"
         fails: "Update unsuccessful!"
+    users:
+      index:
+        title: "Users"
+        header: "All Users"
+        id: "ID"
+        name: "User Name"
+        email: "Email"
+        time: "Join Date"
+        option: "Options"
+        btn_add_new: "Add User"
+      destroy:
+        resource: "User"

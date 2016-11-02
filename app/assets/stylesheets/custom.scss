@@ -1291,6 +1291,12 @@ tr {
 .results {
   margin-bottom: 50px;
 }
+.pagination {
+  margin: 0;
+  ul {
+    margin-top: 5px;
+  }
+}
 .table-hover {
   border: 1px solid #ddd;
 }
