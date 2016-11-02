@@ -1,10 +1,20 @@
 class UsersController < ApplicationController
   before_action :not_logged_in, only: [:new, :create]
-  before_action :logged_in_user, only: :index
+  before_action :logged_in_user, only: [:index, :show]
 
   def index
     @users = User.order_by_name.paginate page: params[:page],
       per_page: Settings.user_per_page
+  end
+
+  def show
+    @user = User.find_by_id params[:id]
+    if @user
+      @followers_size = @user.followers.size
+      @following_size = @user.following.size
+      @user_result_ids = @user.lessons.result_ids
+      @learned_words = Meaning.remembered_words @user_result_ids
+    end
   end
 
   def new

@@ -69,6 +69,17 @@ en:
       warning_login: "Login to see member list!"
     user:
       join_date: "Join date:"
+    profile:
+      lesson_count: "lesson"
+      follower_count: "follower"
+      following_count: "following"
+      btn_follow: "Follow"
+      btn_unfollow: "Unfollow"
+      words_remembered: "%{number} words remembered"
+    show:
+      header_profile: "Profile"
+      header_activities: "Activities"
+      not_found_user: "User not found!"
   shared:
     error_messages:
       message: "The form contains"
@@ -77,6 +88,7 @@ en:
     create:
       log_in_fails: "Invalid email or password!"
   application:
+    warning_login: "Please login to continue!"
     logged_in_user:
       warning_login: "Please login to continue!"
   categories:
