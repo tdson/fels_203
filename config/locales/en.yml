@@ -80,6 +80,10 @@ en:
       header_profile: "Profile"
       header_activities: "Activities"
       not_found_user: "User not found!"
+    follow:
+      btn_follow: "Follow"
+    unfollow:
+      btn_unfollow: "Unfollow"
   shared:
     error_messages:
       message: "The form contains"
@@ -113,6 +117,10 @@ en:
       title: "Result"
       scores: "Scores:"
       total_time: "Total time:"
+  relationships:
+    fails: "Sorry, something went wrong, cannot follow/unfollow right now."
+    cannot_follow: "Sorry, cannot follow this user!"
+    cannot_unfollow: "Sorry, cannot unfollow this user!"
   admin:
     search_holder: "Search"
     load_fails:

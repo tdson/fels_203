@@ -1,0 +1,3 @@
+$('#follow_form').html('<%= j render "users/unfollow" %>');
+$('#followers').html(
+  '<%= pluralize @followers_size, t("users.profile.follower_count") %>');
