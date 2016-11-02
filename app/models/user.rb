@@ -20,6 +20,9 @@ class User < ApplicationRecord
   before_save {email.downcase!}
 
   scope :order_by_name, ->{order :name}
+  scope :search_name_or_email, ->q do
+    where "name LIKE ? OR email LIKE ?", "%#{q}%", "%#{q}%" if q.present?
+  end
 
   class << self
     def digest string
@@ -53,5 +56,9 @@ class User < ApplicationRecord
 
   def avatar_path
     self.avatar? ? self.avatar.url : Settings.avatar_default
+  end
+
+  def is_user? user
+    self == user
   end
 end

@@ -12,8 +12,11 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require dataTables/jquery.dataTables
+//= require dataTables/bootstrap/3/jquery.dataTables.bootstrap
 //= require turbolinks
 //= require cable
 //= require bootstrap
 //= require auto_hide_alert
 //= require search
+//= require datatable

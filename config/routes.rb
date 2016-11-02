@@ -3,7 +3,7 @@ Rails.application.routes.draw do
     root "words#index"
     resources :categories
     resources :words, only: :index
-    resources :users, only: :index
+    resources :users, except: :update
   end
 
   root "static_pages#index"
