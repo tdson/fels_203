@@ -126,6 +126,7 @@ en:
     load_fails:
       category: "Category not found!"
       user: "User not found!"
+      word: "Word not found!"
     delete:
       success: "%{resource} has been deleted!"
       fails: "Delete %{resource} unsuccessful!"
@@ -178,3 +179,16 @@ en:
         btn_add_new: "Add User"
       destroy:
         resource: "User"
+    words:
+      resource: "word"
+      index:
+        title: "Words Library"
+        header: "All Words"
+        filter: "Category"
+        btn_add_new: "Add Word"
+        id: "ID"
+        word: "Word"
+        category: "Category"
+        option: "Options"
+        time: "Last Update"
+        filter_all_cate: "-- Select a category --"

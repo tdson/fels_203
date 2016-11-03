@@ -2,8 +2,8 @@ Rails.application.routes.draw do
   namespace :admin do
     root "words#index"
     resources :categories
-    resources :words, only: :index
     resources :users, except: :update
+    resources :words, except: :update
   end
 
   root "static_pages#index"

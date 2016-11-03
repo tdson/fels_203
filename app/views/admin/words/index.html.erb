@@ -1,0 +1,58 @@
+<% provide :title, t(".title") %>
+<div class="wrapper">
+  <%= render "admin/layouts/left_panel" %>
+  <div class="col-md-9 col-sm-12">
+    <h1 class="admin-header">
+      <%= t ".header" %>
+      <span class="pull-right">
+        <%= link_to new_admin_word_path, class: "btn btn-primary" do %>
+          <i class="fa fa-cloud-upload"></i>
+          <%= t ".btn_add_new" %>
+        <% end %>
+      </span>
+    </h1>
+    <div class="col-md-12 filters">
+      <div class="form-group">
+        <%= form_tag admin_words_path, method: :get, id: "admin_search",
+          class: "row" do %>
+          <div class="col-md-6">
+            <%= hidden_field_tag :category_id, params[:category_id],
+              id: "category_id" %>
+            <%= select_tag "category-selectbox",
+              options_from_collection_for_select(@categories, :id, :name),
+              include_blank: t(".filter_all_cate"),
+              class: "selectpicker form-control" %>
+          </div>
+          <div class="col-md-6">
+            <%= render "admin/shared/search_form" %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+    <div class="pagination-wrapper">
+      <div class="pull-right words-pagination">
+        <%= will_paginate %>
+      </div>
+    </div>
+    <table id="words-data-table" class="table table-hover">
+      <thead>
+        <tr>
+          <th class="text-center"><%= t ".id" %></th>
+          <th class="text-center"><%= t ".word" %></th>
+          <th class="text-center"><%= t ".category" %></th>
+          <th class="text-center"><%= t ".time" %></th>
+          <th class="text-center"><%= t ".option" %></th>
+        </tr>
+      </thead>
+      <tbody id="result_search">
+        <%= render "word" %>
+      </tbody>
+    </table>
+    <div class="pagination-wrapper">
+      <div class="pull-right words-pagination">
+        <%= will_paginate %>
+      </div>
+    </div>
+  </div>
+</div>
+<%= javascript_include_tag "words", "data-turbolinks-track": true %>
