@@ -1,0 +1,15 @@
+<% provide :title, t(".title") %>
+<div class="wrapper">
+  <%= render "admin/layouts/left_panel" %>
+  <div class="col-md-9 col-sm-12">
+    <h1 class="admin-header">
+      <%= t ".header" %>
+    </h1>
+    <div class="col-md-8 col-md-offset-2">
+      <div id="create_word">
+        <%= render "word_modal" %>
+      </div>
+    </div>
+  </div>
+</div>
+<%= javascript_include_tag "words", "data-turbolinks-track": true %>
