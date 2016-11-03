@@ -1,0 +1,5 @@
+<%= form_for @active_relationship, html: {method: :delete},
+  remote: true do |f| %>
+  <div class="blank-line"></div>
+  <%= f.submit t(".btn_unfollow"), class: "btn btn-sm" %>
+<% end %>

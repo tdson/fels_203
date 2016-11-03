@@ -14,6 +14,12 @@ class UsersController < ApplicationController
       @following_size = @user.following.size
       @user_result_ids = @user.lessons.result_ids
       @learned_words = Meaning.remembered_words @user_result_ids
+      if current_user.active_relationships.find_by(followed: @user.id).nil?
+        @active_relationship = current_user.active_relationships.build
+      else
+        @active_relationship = current_user.active_relationships
+          .find_by(followed_id: @user.id)
+      end
     end
   end
 
