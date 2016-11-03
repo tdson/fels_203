@@ -15,3 +15,4 @@ admin:
   image_accepted_formats: "image/jpeg,image/gif,image/png"
   resize_image: 400
   user_per_page: 20
+  word_per_page: 20

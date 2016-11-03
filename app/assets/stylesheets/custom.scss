@@ -1356,3 +1356,29 @@ tr {
     width: 100%;
   }
 }
+table {
+  border: 1px solid #ddd;
+}
+.filters {
+  padding: 15px 0;
+  .col-md-6 {
+    margin: 10px 0;
+  }
+  .form-group {
+    margin-bottom: 0;
+  }
+  #admin_search {
+    margin-bottom: 0;
+  }
+}
+.selectpicker {
+  display: inline;
+}
+.pagination-wrapper {
+  ul {
+    margin: 0;
+  }
+  .pagination {
+    margin-top: 0;
+  }
+}

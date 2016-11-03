@@ -19,4 +19,3 @@
 //= require bootstrap
 //= require auto_hide_alert
 //= require search
-//= require datatable
