@@ -1,0 +1,65 @@
+<section id="hero-area" >
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 text-center middle-text">
+        <div class="blank-block"></div>
+        <div class="block wow fadeInUp" data-wow-delay=".3s">
+          <section class="cd-intro">
+            <h1 class="wow fadeInUp animated cd-headline slide"
+              data-wow-delay=".4s" >
+              <span><%= t ".txt_welcome" %></span><br>
+              <span class="cd-words-wrapper">
+                <b class="is-visible"><%= t ".txt_greeting" %></b>
+              </span>
+            </h1>
+          </section>
+          <%= link_to t(".btn_sign_in"), "#", class: "btn-lines dark light wow
+            fadeInUp animated smooth-scroll btn btn-default btn-green",
+            data: {toggle: "modal", target: "#signin_modal"} %>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-sm-6">
+        <div class="block wow fadeInLeft" data-wow-delay=".3s"
+          data-wow-duration="500ms">
+            <h2><%= t ".header_about" %></h2>
+            <p><%= t ".txt_about" %></p>
+            <p><%= t ".txt_about" %></p>
+        </div>
+      </div>
+      <div class="col-md-6 col-sm-6">
+        <div class="block wow fadeInRight" data-wow-delay=".3s"
+          data-wow-duration="500ms">
+          <%= image_tag "about.jpg" %>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="call-to-action">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="block">
+          <h2 class="title wow fadeInDown" data-wow-delay=".3s"
+            data-wow-duration="500ms">
+            <%= t ".txt_sign_up" %>
+          </h2>
+          <p class="wow fadeInDown" data-wow-delay=".5s"
+            data-wow-duration="500ms">
+            <%= t ".txt_info" %>
+          </p>
+          <%= link_to t(".btn_sign_up"), signup_url,
+            class: "btn btn-default btn-contact wow fadeInDown" %>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

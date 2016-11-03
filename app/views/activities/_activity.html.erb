@@ -1,0 +1,16 @@
+<% if is_valid? activity %>
+  <ul class="activity">
+    <li>
+      <%= avatar_for get_user(activity), size: Settings.avatar_small %>
+      <%= activity_user activity %>
+      <%= activity_description activity %>
+      <%= link_to_activity_target activity %>
+      <span class="pull-right">
+        <small>
+          <%= t "activities.time",
+            time: time_ago_in_words(activity.created_at) %>
+        </small>
+      </span>
+    </li>
+  </ul>
+<% end %>
