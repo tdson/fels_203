@@ -1272,10 +1272,10 @@ tr {
   margin-bottom: 20px;
 }
 .correct-result {
-  border-color: green;
+  border: 2px solid green;
 }
 .wrong-result {
-  border-color: red;
+  border: 2px solid red;
 }
 .correct-meaning {
   background-color: yellow;
@@ -1380,5 +1380,27 @@ table {
   }
   .pagination {
     margin-top: 0;
+  }
+}
+.blank-block {
+  padding-top: 200px;
+}
+.panel-heading {
+  h3 {
+    margin: 0;
+  }
+}
+.activity {
+  padding: 20px 0;
+  img {
+    margin-right: 10px;
+  }
+}
+.panel-footer {
+  .pagination {
+    margin: 0;
+    ul {
+      margin: 0;
+    }
   }
 }

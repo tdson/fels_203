@@ -38,7 +38,7 @@ en:
       btn_sign_in_tw: "Sign in with Twitter account"
       link_forget_password: "Forgot password?"
   static_pages:
-    index:
+    guest:
       txt_welcome: "Well come to E-Learning System"
       txt_greeting: "Are you ready to learn new words?"
       btn_sign_in: "Sign In"
@@ -121,6 +121,14 @@ en:
     fails: "Sorry, something went wrong, cannot follow/unfollow right now."
     cannot_follow: "Sorry, cannot follow this user!"
     cannot_unfollow: "Sorry, cannot unfollow this user!"
+  activities:
+    header: "News Feed"
+    lesson: "lesson of"
+    time: "%{time} ago"
+    type_0: "started a new"
+    type_1: "finished a"
+    type_2: "followed"
+    type_3: "unfollowed"
   admin:
     search_holder: "Search"
     load_fails:

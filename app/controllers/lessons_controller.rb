@@ -23,9 +23,6 @@ class LessonsController < ApplicationController
     params = lesson_params
     params[:is_finished] = true;
     if @lesson.update_attributes params
-      unless @lesson.set_scores get_scores
-        flash[:warning] = t ".warning"
-      end
       redirect_to category_lesson_path @lesson.category, @lesson
     else
       flash[:danger] = ".fails"
@@ -34,15 +31,12 @@ class LessonsController < ApplicationController
   end
 
   def show
-    @results = @lesson.results.includes word: :meanings
-    @scores = @lesson.scores || get_scores
+    @results = @lesson.results
+    @scores = @results.correct_meanings.count
+    @results = @results.includes word: :meanings
   end
 
   private
-  def get_scores
-    @lesson.results.correct_meanings.count
-  end
-
   def lesson_params
     params.require(:lesson)
       .permit :is_finished, results_attributes: [:id, :meaning_id]
