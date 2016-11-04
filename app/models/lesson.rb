@@ -19,6 +19,7 @@ class Lesson < ApplicationRecord
     allow_destroy: true
 
   scope :result_ids, ->{joins(:results).pluck "results.id"}
+  scope :newest, ->{order created_at: :desc}
 
   def set_scores scores
     self.update_attributes scores: scores
