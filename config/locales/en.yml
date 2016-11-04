@@ -129,6 +129,27 @@ en:
     type_1: "finished a"
     type_2: "followed"
     type_3: "unfollowed"
+  words:
+    index:
+      title: "Word List"
+      header: "Word List"
+      lb_download: "Download:"
+      csv_format: CSV
+      excel_format: XLS
+      excel_h_word: "Word"
+      excel_h_meaning: "Meaning"
+    filter_form:
+      filter_all_cate: "All category"
+      holder: "Search word or category..."
+      btn_submit: Search
+    word_table:
+      no: "#"
+      word: "Word"
+      meaning: "Meaning"
+      category: "Category"
+    csv:
+      word: "Word"
+      meaning: "Meaning"
   admin:
     search_holder: "Search"
     load_fails:

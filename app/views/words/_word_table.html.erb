@@ -1,0 +1,14 @@
+<table class="table table-hover">
+  <thead>
+    <th><%= t ".no" %></th>
+    <th><%= t ".word" %></th>
+    <th><%= t ".meaning" %></th>
+    <th><%= t ".category" %></th>
+  </thead>
+  <tbody id="search_result">
+    <%= render "table_body" %>
+  </tbody>
+</table>
+<div class="text-center">
+  <%= will_paginate %>
+</div>
