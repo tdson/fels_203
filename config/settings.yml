@@ -12,6 +12,7 @@ category_default_thumbnail: "default_category.jpg"
 limit_category_name: 40
 word_per_lesson: 5
 activities_per_page: 20
+lesson_time: 5
 admin:
   category_per_page: 20
   image_accepted_formats: "image/jpeg,image/gif,image/png"

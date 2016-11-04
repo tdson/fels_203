@@ -157,7 +157,7 @@ a:hover {
 #hero-area:before {
   content: '';
   z-index: 9;
-  background: rgba(255, 255, 255, 0.78);
+  background: rgba(255, 255, 255, 0.65);
   position: absolute;
   top: 0;
   left: 0;
@@ -1126,20 +1126,20 @@ button span {
   background-color: #507cc0;
 }
 .btn-gp {
-  background-color: #64ccf1;
+  background-color: #df4930;
 }
 .btn-tw {
-  background-color: #df4930;
+  background-color: #64ccf1;
 }
 .btn-fb:hover {
   background-color: #507cc0;
   border: 1px solid #507cc0;
 }
-.btn-gp:hover {
+.btn-tw:hover {
   background-color: #64ccf1;
   border: 1px solid #64ccf1;
 }
-.btn-tw:hover {
+.btn-gp:hover {
   background-color: #df4930;
   border: 1px solid #df4930;
 }
@@ -1411,4 +1411,29 @@ table {
   .add-field {
     padding-left: 20px;
   }
+}
+.fixed-progress {
+  position: fixed;
+  top: 110px;
+  right: 130px;
+  border-color: #ddd;
+  background-color: transparent;
+  .title {
+    color: #333;
+    font-weight: bold;
+    font-size: 14px;
+    text-transform: initial;
+    font-family: monospace;
+    margin: 5px 0;
+  }
+  .remaining-time {
+    text-align: center;
+    font-size: 26px;
+    font-weight: bold;
+    font-family: monospace;
+    color: red;
+  }
+}
+.fancybox {
+  font-size: 16px;
 }
