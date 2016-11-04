@@ -1,0 +1,26 @@
+<%= form_for @user, html: {multipart: true} do |f| %>
+  <div class="panel-body">
+    <div class="form-group">
+      <%= f.label :name, t(".lb_name") %>
+      <%= f.text_field :name, class: "form-control" %>
+    </div>
+    <div class="form-group">
+      <%= f.label :avatar, t(".lb_avatar") %>
+      <span class="text-blue">
+        <small>
+          <%= t ".img_formats",
+            formats: Settings.admin.image_accepted_formats %>
+        </small>
+      </span>
+      <div class="current_ava">
+        <%= avatar_for @user %>
+      </div>
+      <div class="btn_change_ava">
+        <%= f.file_field :avatar, accept: Settings.image_accepted_formats %>
+      </div>
+    </div>
+  </div>
+  <div class="panel-footer">
+    <%= f.submit t(".btn_submit"), class: "btn btn-primary btn-sm" %>
+  </div>
+<% end %>

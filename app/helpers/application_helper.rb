@@ -75,4 +75,8 @@ module ApplicationHelper
     href = html_options[:href] || "#"
     content_tag :a, name, html_options.merge(href: href, onclick: onclick)
   end
+
+  def active_tab params, tab_id
+    Settings.active_class if params[:tab] == tab_id
+  end
 end

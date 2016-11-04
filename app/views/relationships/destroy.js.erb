@@ -1,3 +1,4 @@
 $('#follow_form').html('<%= j render "users/follow" %>');
 $('#followers').html(
-  '<%= pluralize @followers_size, t("users.profile.follower_count") %>');
+  '<%= pluralize @followers.count, t("users.profile.follower_count") %>');
+$('#log-preview').html('<%= j render "users/log_tabs" %>');

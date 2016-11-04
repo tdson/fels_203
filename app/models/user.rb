@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-  attr_accessor :remember_token
+  attr_accessor :remember_token, :current_password
 
   has_many :lessons, dependent: :destroy
   has_many :activities, dependent: :destroy
@@ -17,6 +17,10 @@ class User < ApplicationRecord
     format: {with: VALID_EMAIL_REGEX},
     uniqueness: {case_sensitive: false}
   validates :password, length: {minimum: 6}, presence: true, allow_nil: true
+  validate :verify_current_password, if: :changed_email_or_pass?, on: :update
+
+  mount_uploader :avatar, ImageUploader
+
   before_save {email.downcase!}
 
   scope :order_by_name, ->{order :name}
@@ -77,5 +81,17 @@ class User < ApplicationRecord
 
   def following? other_user
     following.include? other_user
+  end
+
+  private
+  def verify_current_password
+    unless User.find(id).authenticate current_password
+      errors.add :current_password, I18n.t("users.update.incorrect_password")
+    end
+  end
+
+  def changed_email_or_pass?
+    user = User.find id
+    !(password.blank? && user.email == email.downcase)
   end
 end

@@ -3,7 +3,7 @@ Rails.application.routes.draw do
     root "words#index"
     resources :categories
     resources :users, except: :update
-    resources :words, except: :update
+    resources :words
   end
 
   root "static_pages#index"
@@ -18,4 +18,5 @@ Rails.application.routes.draw do
   resources :categories, only: :index do
     resources :lessons, except: [:index, :new, :destroy]
   end
+  resources :words, only: :index
 end

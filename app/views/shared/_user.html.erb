@@ -1,0 +1,8 @@
+  <ul class="activity">
+    <li>
+      <%= link_to user do %>
+        <%= avatar_for user, size: Settings.avatar_small %>
+        <%= user.name %>
+      <% end %>
+    </li>
+  </ul>

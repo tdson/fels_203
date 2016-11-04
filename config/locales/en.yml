@@ -78,16 +78,50 @@ en:
       words_remembered: "%{number} words remembered"
     show:
       header_profile: "Profile"
-      header_activities: "Activities"
+      link_edit: "Edit"
       not_found_user: "User not found!"
+      not_found_user: "User not found!"
+    log_tabs:
+      header_activities: "Activities"
+      header_followers: "Followers"
+      header_following: "Following"
+      nothing: "Follow this user to see the activities."
     follow:
       btn_follow: "Follow"
     unfollow:
       btn_unfollow: "Unfollow"
+    load_fails: "User not found!"
+    edit:
+      title: "Setting Profile"
+      btn_submit: "Save changes"
+      header_left_block: "Update Information"
+      header_right_block: "Account Settings"
+      access_denied: "Access denied!"
+    info_form:
+      lb_name: "Name"
+      lb_avatar: "Avatar"
+      img_formats: "Only accept these formats: JPG/JPEG, PNG, GIF."
+      btn_submit: "Update"
+    settings_form:
+      lb_email: "Email"
+      lb_password_old: "Current password"
+      lb_password_new: "New password"
+      lb_password_conf: "Password confirmation"
+      lb_permission: "Permission"
+      lb_is_admin: "Administrator"
+      btn_submit: "Update"
+      infor_1: "Verify current password to change email or password."
+      infor_2: "Leave New password blank if you don't want to change."
+    update:
+      incorrect_password: "is incorrect."
+      success: "Updated information and setting successfully!"
   shared:
     error_messages:
       message: "The form contains"
       error: "error"
+    search_form:
+      holder: "Search..."
+      btn_submit: "Search"
   sessions:
     create:
       log_in_fails: "Invalid email or password!"
@@ -131,6 +165,27 @@ en:
     type_1: "finished a"
     type_2: "followed"
     type_3: "unfollowed"
+  words:
+    index:
+      title: "Word List"
+      header: "Word List"
+      lb_download: "Download:"
+      csv_format: CSV
+      excel_format: XLS
+      excel_h_word: "Word"
+      excel_h_meaning: "Meaning"
+    filter_form:
+      filter_all_cate: "All category"
+      holder: "Search word or category..."
+      btn_submit: Search
+    word_table:
+      no: "#"
+      word: "Word"
+      meaning: "Meaning"
+      category: "Category"
+    csv:
+      word: "Word"
+      meaning: "Meaning"
   admin:
     search_holder: "Search"
     load_fails:
@@ -191,7 +246,6 @@ en:
         resource: "User"
     words:
       resource: "word"
-    words:
       index:
         title: "Words Library"
         header: "All Words"
@@ -213,6 +267,9 @@ en:
         content_placeholder: "Content"
         lb_option: "Meaning options:"
         btn_submit: "Add Word"
+        lb_option: "Options:"
+        btn_submit: "Add Word"
+        btn_save: "Save changes"
         link_add_more: "[+] Add more"
         link_remove: "remove"
         lb_is_correct: "is correct?"
@@ -231,6 +288,11 @@ en:
         lb_is_correct: "is correct?"
       create:
         success: "Added successfully!"
+      edit:
+        title: "Edit ~"
+        header: "Edit:"
+      update:
+        success: "Updated successfully!"
   validates:
     words:
       too_many_options: "too many options, maximum is 6."

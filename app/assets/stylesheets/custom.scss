@@ -1437,3 +1437,55 @@ table {
 .fancybox {
   font-size: 16px;
 }
+.btn_change_ava {
+  padding-left: 100px;
+  position: relative;
+  height: 80px;
+  input {
+    position: absolute;
+    bottom: 0;
+  }
+}
+#edit_info {
+  .panel-footer {
+    text-align: right;
+  }
+}
+#account_settings {
+  .panel-footer {
+    text-align: right;
+  }
+}
+.tab {
+  padding-left: 50px;
+}
+.fe-search {
+  display: block;
+  width: 100%;
+}
+.menu-item {
+  padding: 0 10px;
+  h3 {
+    display: inline;
+  }
+}
+.center-item {
+  padding: 0 10px;
+  border-left: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+}
+.left-item {
+  padding-left: 0;
+}
+.tab-pane-footer {
+  margin-top: 30px;
+}
+.filter-item {
+  margin: 0 10px;
+}
+.download-format {
+  margin-left: 5px;
+}
+.download-section {
+  margin-bottom: 10px;
+}

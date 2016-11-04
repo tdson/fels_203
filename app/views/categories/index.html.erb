@@ -5,13 +5,19 @@
       <h1 class="title wow fadeInDown" data-wow-delay=".3s">
         <%= t ".header" %>
       </h1>
+      <div class="col-md-6 col-md-offset-3 wow fadeInDown" data-wow-delay=".6s">
+        <%= form_tag categories_path, method: :get, id: "admin_search",
+          class: "row" do %>
+          <%= render "shared/search_form" %>
+        <% end %>
+      </div>
     </div>
     <div class="row">
-      <ul>
+      <ul id="result_search">
         <%= render @categories %>
       </ul>
     </div>
-    <div class="text-center">
+    <div class="text-center" id="paginations">
       <%= will_paginate %>
     </div>
   </div>
