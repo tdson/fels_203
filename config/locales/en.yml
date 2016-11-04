@@ -189,6 +189,7 @@ en:
         resource: "User"
     words:
       resource: "word"
+    words:
       index:
         title: "Words Library"
         header: "All Words"
@@ -200,3 +201,36 @@ en:
         option: "Options"
         time: "Last Update"
         filter_all_cate: "-- Select a category --"
+        modal_header: "Add New Word"
+      word_modal:
+        title: "Add New Word"
+        header: "Add New Word"
+        lb_category: "Category:"
+        blank_category: "Select a category"
+        lb_content: "Word:"
+        content_placeholder: "Content"
+        lb_option: "Meaning options:"
+        btn_submit: "Add Word"
+        link_add_more: "[+] Add more"
+        link_remove: "remove"
+        lb_is_correct: "is correct?"
+      new:
+        title: "Add New Word"
+        header: "Add New Word"
+      word_form:
+        lb_category: "Category:"
+        blank_category: "Select a category"
+        lb_content: "Word:"
+        content_placeholder: "Content"
+        lb_option: "Options:"
+        btn_submit: "Add Word"
+        link_add_more: "[+] Add more"
+        link_remove: "remove"
+        lb_is_correct: "is correct?"
+      create:
+        success: "Added successfully!"
+  validates:
+    words:
+      too_many_options: "too many options, maximum is 6."
+      too_less_options: "too less options, at least 2."
+      too_many_correct_options: "requires 01 correct option."

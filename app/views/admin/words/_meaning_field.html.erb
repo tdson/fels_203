@@ -1,0 +1,12 @@
+<div class="row option">
+  <div class="col-md-7">
+    <%= f.text_field :content, class: "form-control" %>
+  </div>
+  <div class="col-md-3">
+    <%= f.check_box :is_correct, class: "option_checkbox" %>
+    <%= f.label :is_correct, t("admin.words.word_modal.lb_is_correct") %>
+  </div>
+  <div class="col-md-2">
+    <%= link_to_remove_field t("admin.words.word_modal.link_remove"), f %>
+  </div>
+</div>

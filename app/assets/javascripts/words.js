@@ -10,5 +10,25 @@ $(document).ready(function(){
     $('#category_id').val($(this).val());
     $.get($('#admin_search').attr('action'),
       $('#admin_search').serialize(), null, 'script');
-  })
+  });
+
+  $('form').on('change', 'input[type=checkbox]', function() {
+    $('.option_checkbox').not(this).prop('checked', false);
+  });
 });
+
+MAX_OPTIONS = 6;
+function remove_field(link) {
+  $(link).prev('input[type=hidden]').value = '1';
+  $(link).closest('.option').remove();
+}
+
+function add_field(link, association, content) {
+  numberOfAnswerField = $('.option').length;
+  if (numberOfAnswerField >= MAX_OPTIONS) {
+    return;
+  }
+  var new_id = new Date().getTime();
+  var regexp = new RegExp('new_' + association, 'g');
+  $(link).parent().before(content.replace(regexp, new_id));
+}
