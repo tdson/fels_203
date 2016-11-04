@@ -50,6 +50,12 @@ en:
       txt_info: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.
         Nobis, possimus commodi, fugiat magnam temporibus vero mani recusandae?"
       btn_sign_up: "Sign Up Now"
+    daily_word:
+      header: "Daily Word"
+    user_widget:
+      greeting_txt: "Welcome back"
+      follower: "Follower"
+      following: "Following"
   users:
     new:
       title: "Sign Up"

@@ -1,0 +1,17 @@
+<div class="col-md-3">
+  <div class="panel panel-default sidebar-menu">
+    <div class="panel-heading">
+      <h3 class="panel-title"><%= t ".header" %></h3>
+    </div>
+    <div class="panel-body daily-word">
+      <div class="word">
+        <strong>
+          <%= @word.content %>
+        </strong>
+      </div>
+      <div class="meaning">
+        <%= @word.meanings.first.content %>
+      </div>
+    </div>
+  </div>
+</div>
