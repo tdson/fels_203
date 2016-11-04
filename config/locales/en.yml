@@ -110,6 +110,8 @@ en:
       not_enough_word: "Sorry, not enough words to start a lesson, try later!"
     edit:
       btn_submit: "Submit"
+      progress: "Progress:"
+      remaining_time: "Remaining time:"
     update:
       warning: "Something went wrong! Canot show your score right now."
       fails: "Submit unsuccessful, try later!"

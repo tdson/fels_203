@@ -1,7 +1,8 @@
 <% provide :title, @lesson.category.name %>
-<div class="col-md-8 col-md-offset-2">
+<div class="col-md-8 col-md-offset-1">
   <div class="box">
     <h2 class="text-center"><%= @lesson.category.name %></h2>
+    <%= hidden_field_tag :lesson_time, Settings.lesson_time %>
     <hr>
     <div class="table-responsive">
       <%= form_for [@category, @lesson] do |f| %>
@@ -32,3 +33,20 @@
     </div>
   </div>
 </div>
+<div class="col-md-2 well fixed-progress">
+  <div class="title">
+    <%= t ".progress" %>
+  </div>
+  <div class="progress">
+    <div class="progress-bar progress-bar-success" role="progressbar">
+      <span id="selected"></span><span id="total"></span>
+    </div>
+  </div>
+  <div class="title">
+    <%= t ".remaining_time" %>
+  </div>
+  <div class="remaining-time">
+    <span id="counter"></span>
+  </div>
+</div>
+<%= javascript_include_tag "lesson", "data-turbolinks-track": true %>
