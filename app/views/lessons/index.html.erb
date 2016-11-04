@@ -1,0 +1,20 @@
+<% provide :title, t(".title", user: @user.name) %>
+<div class="wrapper">
+  <h2 class="text-center"><%= t ".header", user: @user.name %></h2>
+  <div class="col-md-10 col-md-offset-1">
+    <table class="table table-hover">
+      <thead>
+        <th><%= t ".id" %></th>
+        <th><%= t ".name" %></th>
+        <th><%= t ".time" %></th>
+        <th><%= t ".results" %></th>
+      </thead>
+      <tbody id="search_result">
+        <%= render @lessons %>
+      </tbody>
+    </table>
+    <div class="text-center" id="paginations">
+      <%= will_paginate %>
+    </div>
+  </div>
+</div>

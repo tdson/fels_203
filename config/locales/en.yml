@@ -117,6 +117,15 @@ en:
       title: "Result"
       scores: "Scores:"
       total_time: "Total time:"
+    index:
+      user_not_found: "User not found!"
+      access_denied: "Access denied!"
+      title: "All Lessons Of %{user}"
+      header: "%{user}'s Lessons"
+      id: "#"
+      name: "Of Category"
+      time: "Started at"
+      results: "Results"
   relationships:
     fails: "Sorry, something went wrong, cannot follow/unfollow right now."
     cannot_follow: "Sorry, cannot follow this user!"
