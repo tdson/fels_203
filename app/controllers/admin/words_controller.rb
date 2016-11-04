@@ -2,8 +2,8 @@ class Admin::WordsController < ApplicationController
   before_action :logged_in_user
   before_action :verify_admin
   before_action :load_category, only: :create
-  before_action :load_categories, only: [:index, :new, :create]
-  before_action :load_word, only: :destroy
+  before_action :load_categories, except: [:show, :destroy]
+  before_action :load_word, only: [:edit, :update, :destroy]
 
   def index
     @words = Word.search_content(params[:q])
@@ -29,6 +29,17 @@ class Admin::WordsController < ApplicationController
   end
 
   def edit
+    @cate_id = @word.category_id if @word
+    render :edit
+  end
+
+  def update
+    if @word.update_attributes word_params
+      flash[:success] = t ".success"
+      redirect_to admin_words_path
+    else
+      render :edit
+    end
   end
 
   def destroy
@@ -65,6 +76,6 @@ class Admin::WordsController < ApplicationController
 
   def word_params
     params.require(:word).permit :category_id, :content,
-      meanings_attributes: [:content, :is_correct]
+      meanings_attributes: [:id, :content, :is_correct]
   end
 end
