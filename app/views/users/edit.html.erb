@@ -1,0 +1,26 @@
+<% provide :title, t(".title") %>
+<div class="wrapper">
+  <div class="col-md-10 col-md-offset-1">
+    <%= render "shared/error_messages", object: @user %>
+  </div>
+  <div class="col-md-5 col-md-offset-1">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title"><%= t ".header_left_block" %></h3>
+      </div>
+      <div id="edit_info">
+        <%= render "info_form" %>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-5">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title"><%= t ".header_right_block" %></h3>
+      </div>
+      <div id="account_settings">
+        <%= render "settings_form" %>
+      </div>
+    </div>
+  </div>
+</div>

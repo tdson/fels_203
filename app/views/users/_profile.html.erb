@@ -15,10 +15,10 @@
       <li><%= pluralize @user_result_ids.count, t(".lesson_count") %></li>
       <li><%= t ".words_remembered", number: @learned_words.count %></li>
       <li id="followers">
-        <%= pluralize @followers_size, t(".follower_count") %>
+        <%= pluralize @followers.size, t(".follower_count") %>
       </li>
       <li id="following">
-        <%= pluralize @following_size, t(".following_count") %>
+        <%= pluralize @following.size, t(".following_count") %>
       </li>
     </ul>
   </div>

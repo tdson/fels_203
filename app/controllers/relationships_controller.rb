@@ -8,7 +8,7 @@ class RelationshipsController < ApplicationController
     @active_relationship = current_user.active_relationships
       .find_by followed_id: @user.id
     return redirect_if_not_found url: @user unless @user
-    @followers_size = @user.followers.size
+    load_data @user
     respond
   end
 
@@ -19,7 +19,7 @@ class RelationshipsController < ApplicationController
     return redirect_if_not_found url: @user unless current_user.following? @user
     current_user.unfollow @user
     @active_relationship = current_user.active_relationships.build
-    @followers_size = @user.followers.size
+    load_data @user
     respond
   end
 
