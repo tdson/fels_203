@@ -50,6 +50,8 @@ en:
       txt_info: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.
         Nobis, possimus commodi, fugiat magnam temporibus vero mani recusandae?"
       btn_sign_up: "Sign Up Now"
+    home:
+      nothing: "Follow people to see what they do!"
     daily_word:
       header: "Daily Word"
     user_widget:
@@ -201,6 +203,12 @@ en:
     csv:
       word: "Word"
       meaning: "Meaning"
+  authentication:
+    create:
+      email_exists: "Your email is already in use! Please login or click Forgot
+        password if you don't remember."
+      warning: "Your current password is: %{pass},
+        please change it to make sure your account is secure."
   admin:
     search_holder: "Search"
     load_fails:

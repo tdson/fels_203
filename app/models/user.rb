@@ -9,6 +9,7 @@ class User < ApplicationRecord
     foreign_key: :followed_id, dependent: :destroy
   has_many :following, through: :active_relationships, source: :followed
   has_many :followers, through: :passive_relationships, source: :follower
+  has_many :authorizations
 
   has_secure_password
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
@@ -37,6 +38,13 @@ class User < ApplicationRecord
 
     def new_token
       SecureRandom.urlsafe_base64
+    end
+
+    def create_form_auth auth
+      user = User.create name: auth[:info][:name], email: auth[:info][:email],
+        password: Settings.default_password
+      user.authorizations.create provider: auth[:provider], uid: auth[:uid]
+      user
     end
   end
 

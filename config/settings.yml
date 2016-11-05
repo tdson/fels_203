@@ -20,6 +20,7 @@ word_filters: {remembered: "remembered", learned: "learned", not_learned: "not_l
 exp_file_name: "words"
 lesson_per_page: 10
 daily_word: 1
+default_password: "elearning.com"
 formats:
   csv: "csv"
   excel: "xls"

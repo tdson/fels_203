@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   get "/login", to: "sessions#new"
   post "/login", to: "sessions#create"
   delete "/logout", to: "sessions#destroy"
+  get "auth/:provider/callback", to: "authentication#create", as: "social_login"
   resources :users, except: :delete do
     resources :lessons, only: :index
   end

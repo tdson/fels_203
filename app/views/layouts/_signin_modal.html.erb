@@ -29,18 +29,21 @@
             </div>
           <% end %>
           <h5 class="line-back"><span><%= t ".lb_or" %></span></h5>
-          <button class="btn btn-default btn-social-login btn-fb">
+          <%= link_to "auth/facebook",
+            class: "btn btn-default btn-social-login btn-fb" do %>
             <i class="fa fa-facebook-square"></i>
             <span class="btn-text"><%= t ".btn_sign_in_fb" %></span>
-          </button>
-          <button class="btn btn-default btn-social-login btn-gp">
+          <% end %>
+          <%= link_to "auth/google_oauth2",
+            class: "btn btn-default btn-social-login btn-gp" do %>
             <i class="fa fa-google-plus-square"></i>
             <span class="btn-text"><%= t ".btn_sign_in_gp" %></span>
-          </button>
-          <button class="btn btn-default btn-social-login btn-tw">
+          <% end %>
+          <%= link_to "auth/twitter",
+            class: "btn btn-default btn-social-login btn-tw" do %>
             <i class="fa fa-twitter-square"></i>
             <span class="btn-text"><%= t ".btn_sign_in_tw" %></span>
-          </button>
+          <% end %>
         </div>
       </div>
       <div class="modal-footer">
