@@ -4,14 +4,18 @@
       <h3 class="panel-title"><%= t ".header" %></h3>
     </div>
     <div class="panel-body daily-word">
-      <div class="word">
-        <strong>
-          <%= @word.content %>
-        </strong>
-      </div>
-      <div class="meaning">
-        <%= @word.meanings.first.content %>
-      </div>
+      <% if @word %>
+        <div class="word">
+          <strong>
+            <%= @word.content %>
+          </strong>
+        </div>
+        <div class="meaning">
+          <%= @word.meanings.first.content %>
+        </div>
+      <% else %>
+        <span class="thin-text"><%= t ".no_data" %></span>
+      <% end %>
     </div>
   </div>
 </div>

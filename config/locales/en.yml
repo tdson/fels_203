@@ -54,6 +54,7 @@ en:
       nothing: "Follow people to see what they do!"
     daily_word:
       header: "Daily Word"
+      no_data: "No data"
     user_widget:
       greeting_txt: "Welcome back"
       follower: "Follower"

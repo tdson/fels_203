@@ -10,23 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161105082914) do
+ActiveRecord::Schema.define(version: 20161020153642) do
 
   create_table "activities", force: :cascade do |t|
     t.integer  "user_id"
     t.integer  "target_id"
-    t.integer  "action_type"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
-    t.index ["user_id"], name: "index_activities_on_user_id"
-  end
-
-  create_table "authorizations", force: :cascade do |t|
-    t.string   "provider"
-    t.string   "uid"
-    t.integer  "user_id"
+    t.integer  "type"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_activities_on_user_id"
   end
 
   create_table "categories", force: :cascade do |t|
@@ -40,9 +32,8 @@ ActiveRecord::Schema.define(version: 20161105082914) do
     t.integer  "user_id"
     t.integer  "category_id"
     t.integer  "scores"
-    t.datetime "created_at",                  null: false
-    t.datetime "updated_at",                  null: false
-    t.boolean  "is_finished", default: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
     t.index ["category_id"], name: "index_lessons_on_category_id"
     t.index ["user_id"], name: "index_lessons_on_user_id"
   end
@@ -69,7 +60,7 @@ ActiveRecord::Schema.define(version: 20161105082914) do
   create_table "results", force: :cascade do |t|
     t.integer  "lesson_id"
     t.integer  "word_id"
-    t.integer  "meaning_id"
+    t.integer  "meaning_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["lesson_id"], name: "index_results_on_lesson_id"
