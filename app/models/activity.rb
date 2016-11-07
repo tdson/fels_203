@@ -8,6 +8,10 @@ class Activity < ApplicationRecord
       FROM relationships WHERE follower_id = :user_id)", user_id: user.id
   end
   scope :newest, ->{order created_at: :desc}
+  scope :user_log, ->user do
+    where "user_id = :id OR user_id IN (SELECT follower_id
+      FROM relationships WHERE follower_id = :id)", id: user.id
+  end
 
   def get_target_model
     self.action_type < Activity.activity_types[:follow] ? Lesson : User
