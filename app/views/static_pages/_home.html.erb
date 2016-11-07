@@ -1,15 +1,23 @@
 <div class="wrapper">
-  <div class="col-md-5 col-md-offset-3">
+  <%= render "daily_word" %>
+  <div class="col-md-6">
     <div class="panel panel-default sidebar-menu">
       <div class="panel-heading">
         <h3><%= t "activities.header" %></h3>
       </div>
       <div class="panel-body">
-        <%= render @activities %>
+        <% if @activities.any? %>
+          <%= render @activities %>
+        <% else %>
+          <%= t ".nothing" %>
+        <% end %>
       </div>
       <div class="panel-footer text-center">
         <%= will_paginate @activities %>
       </div>
     </div>
+  </div>
+  <div class="col-md-3">
+    <%= render "user_widget" %>
   </div>
 </div>

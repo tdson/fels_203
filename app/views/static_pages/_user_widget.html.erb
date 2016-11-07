@@ -1,0 +1,25 @@
+<div class="sidebar">
+  <div class="author widget">
+    <%= image_tag "user_bg.jpg", class: "img-responsive" %>
+    <div class="author-body text-center">
+      <div class="author-img">
+        <%= link_to image_tag(current_user.avatar_path,
+          size: Settings.avatar_medium), current_user %>
+      </div>
+      <div class="author-bio">
+        <p>
+          <%= t ".greeting_txt" %>
+        </p>
+        <h3><%= link_to current_user.name, current_user %></h3>
+        <p>
+          <span class="follower">
+            <%= pluralize @followers.size, t(".follower") %>
+          </span>
+          <span class="following">
+            <%= pluralize @following.size, t(".following") %>
+          </span>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

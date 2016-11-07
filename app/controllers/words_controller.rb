@@ -11,7 +11,8 @@ class WordsController < ApplicationController
       .order_by_alphabetical_content
     if params[:condition].present? &&
       params[:condition] != Settings.word_filters[:get_all]
-      @words_full = @words_full.send(params[:condition], current_user.id)
+      user_id = params[:user_id] || current_user.id
+      @words_full = @words_full.send(params[:condition], user_id)
     end
     @words = @words_full.paginate page: params[:page],
       per_page: Settings.word_per_page

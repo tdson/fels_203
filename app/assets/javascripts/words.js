@@ -19,8 +19,10 @@ $(document).ready(function(){
 
 MAX_OPTIONS = 6;
 function remove_field(link) {
-  $(link).prev('input[type=hidden]').value = '1';
-  $(link).closest('.option').remove();
+  $(link).prev('input[type=hidden]').val(true);
+  $(link).prev().prev().remove();
+  $(link).closest('.option').css('padding-bottom', "0");
+  $(link).remove();
 }
 
 function add_field(link, association, content) {

@@ -2,6 +2,7 @@ class Admin::CategoriesController < ApplicationController
   before_action :logged_in_user
   before_action :verify_admin
   before_action :load_category, only: [:edit, :update, :destroy]
+  before_action :check_deletable, only: :destroy
 
   def index
     @categories = get_categories
@@ -56,5 +57,12 @@ class Admin::CategoriesController < ApplicationController
   def get_categories
     @categories = Category.includes(:words).search_name(params[:q]).newest
       .paginate page: params[:page], per_page: Settings.admin.category_per_page
+  end
+
+  def check_deletable
+    if @category.lessons.any?
+      flash[:danger] = t ".cannot_delete"
+      redirect_to admin_categories_path
+    end
   end
 end
