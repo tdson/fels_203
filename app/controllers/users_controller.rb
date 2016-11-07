@@ -13,7 +13,8 @@ class UsersController < ApplicationController
   def show
     @user = User.find_by_id params[:id]
     if @user
-      @user_result_ids = @user.lessons.result_ids
+      @user_lessons = @user.lessons
+      @user_result_ids = @user_lessons.result_ids
       @learned_words = Meaning.remembered_words @user_result_ids
       if current_user.active_relationships.find_by(followed: @user.id).nil?
         @active_relationship = current_user.active_relationships.build

@@ -232,6 +232,8 @@ en:
       update:
         success: "Category updated!"
         fails: "Update unsuccessful!"
+      destroy:
+        cannot_delete: "Cannot delete this category!"
     users:
       index:
         title: "Users"

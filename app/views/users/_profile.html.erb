@@ -12,7 +12,7 @@
   </span>
   <div class="stats">
     <ul>
-      <li><%= pluralize @user_result_ids.count, t(".lesson_count") %></li>
+      <li><%= pluralize @user_lessons.count, t(".lesson_count") %></li>
       <li><%= t ".words_remembered", number: @learned_words.count %></li>
       <li id="followers">
         <%= pluralize @followers.size, t(".follower_count") %>
