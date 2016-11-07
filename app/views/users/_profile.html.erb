@@ -12,13 +12,22 @@
   </span>
   <div class="stats">
     <ul>
-      <li><%= pluralize @user_lessons.count, t(".lesson_count") %></li>
-      <li><%= t ".words_remembered", number: @learned_words.count %></li>
+      <li>
+        <%= link_to pluralize(@user_result_ids.count, t(".lesson_count")),
+          user_lessons_path(@user) %>
+      </li>
+      <li>
+        <%= link_to t(".words_remembered", number: @learned_words.count),
+          words_path(condition: Settings.word_filters[:remembered],
+          user_id: @user.id) %>
+      </li>
       <li id="followers">
-        <%= pluralize @followers.size, t(".follower_count") %>
+        <%= link_to pluralize(@followers.size, t(".follower_count")),
+          "#tab_followers", data: {toggle: "tab"} %>
       </li>
       <li id="following">
-        <%= pluralize @following.size, t(".following_count") %>
+        <%= link_to pluralize(@following.size, t(".following_count")),
+          "#tab_following", data: {toggle: "tab"} %>
       </li>
     </ul>
   </div>

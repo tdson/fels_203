@@ -10,6 +10,7 @@ class Word < ApplicationRecord
 
   validates :content, presence: true, length: {maximum: 50}, uniqueness: true
   validate :number_of_meanings
+  validate :valid_meaning_attributes, on: :update
 
   scope :random, ->{order "RANDOM()"}
   scope :order_by_alphabetical_content, ->{order :content}
@@ -66,5 +67,10 @@ class Word < ApplicationRecord
     unless size_of_correct_meaning == Settings.admin.allow_correct_meaning
       errors.add :word, I18n.t("validates.words.too_many_correct_options")
     end
+  end
+
+  def valid_meaning_attributes
+    errors.add :word, I18n.t("validates.words.too_many_correct_options") if
+      meanings.detect{|meaning| meaning.is_correct? && !meaning._destroy}.nil?
   end
 end

@@ -1489,3 +1489,22 @@ table {
 .download-section {
   margin-bottom: 10px;
 }
+.stats {
+  a {
+    color: #333;
+  }
+  a:hover {
+    color: #337ab7;
+  }
+}
+.activity {
+  .pull-right {
+    color: #aaa;
+  }
+  .pull-right:hover {
+    color: #333;
+  }
+}
+.activity:hover .pull-right {
+  color: #333;
+}
