@@ -1,3 +1,5 @@
+require "csv"
+
 class Word < ApplicationRecord
   belongs_to :category
   has_many :meanings, dependent: :destroy, inverse_of: :word
@@ -16,6 +18,41 @@ class Word < ApplicationRecord
   end
   scope :of_category, ->category_id do
     where category_id: category_id if category_id.present?
+  end
+
+  scope :only_correct_meaning, ->do
+    joins(:meanings).where "meanings.is_correct = :is_correct", is_correct: true
+  end
+  scope :search_word_or_category, ->(q) do
+    joins(:category)
+      .where "words.content LIKE :query OR categories.name LIKE :query",
+        query: "%#{q}%" if q.present?
+  end
+  scope :learned, ->user_id do
+    where "words.id IN (SELECT word_id FROM results WHERE lesson_id IN
+      (SELECT id FROM lessons WHERE user_id = ?))", user_id
+  end
+  scope :not_learned, ->user_id do
+    where "words.id NOT IN (SELECT word_id FROM results WHERE lesson_id IN
+      (SELECT id FROM lessons WHERE user_id = ?))", user_id
+  end
+  scope :remembered, ->user_id do
+    where "words.id IN (SELECT results.word_id FROM results INNER JOIN meanings
+      ON results.meaning_id = meanings.id
+        WHERE lesson_id IN (SELECT id FROM lessons WHERE user_id = ?)
+          AND meanings.is_correct = ?)",user_id, true
+  end
+
+  class << self
+    def to_csv
+      attributes = [I18n.t("words.csv.word"), I18n.t("words.csv.meaning")]
+      CSV.generate(headers: true) do |csv|
+        csv << attributes
+        all.each do |word|
+          csv << [word.content, word.meanings.first.content]
+        end
+      end
+    end
   end
 
   private
