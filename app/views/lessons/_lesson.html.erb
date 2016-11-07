@@ -1,0 +1,13 @@
+<tr>
+  <td><%= lesson.id %></td>
+  <td>
+    <%= link_to lesson.category.name,
+      category_lesson_path(lesson.category, lesson) %>
+  </td>
+  <td><%= l lesson.created_at, format: :date_time_format %></td>
+  <td>
+    <strong class="text-red">
+      <%= humanize_scores lesson.results %>
+    </strong>
+  </td>
+</tr>

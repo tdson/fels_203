@@ -4,6 +4,13 @@ class LessonsController < ApplicationController
   before_action :load_lesson, only: [:update, :edit, :show]
   before_action :check_available_words, only: :create
   before_action :first_update, only: [:edit, :update]
+  before_action :correct_user, only: :index
+
+  def index
+    @lessons = @user.lessons.includes(:category, results: :meaning)
+      .newest
+      .paginate page: params[:page], per_page: Settings.lesson_per_page
+  end
 
   def create
     @lesson = @category.lessons.build user: current_user
@@ -66,6 +73,18 @@ class LessonsController < ApplicationController
     if @category.words.count < Settings.word_per_lesson
       flash[:warning] = t ".not_enough_word"
       redirect_to categories_path
+    end
+  end
+
+  def correct_user
+    @user = User.find_by_id params[:user_id]
+    unless @user
+      flash[:danger] = t "lessons.index.user_not_found"
+      redirect_to categories_path and return
+    end
+    unless current_user.is_user? @user
+      flash[:danger] = t "lessons.index.access_denied"
+      redirect_to user_lessons_path current_user
     end
   end
 end

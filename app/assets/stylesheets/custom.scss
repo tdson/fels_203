@@ -1489,3 +1489,55 @@ table {
 .download-section {
   margin-bottom: 10px;
 }
+.daily-word {
+  font-family: monospace;
+  .word {
+    font-size: 16px;
+  }
+  .meaning {
+    font-size: 12px;
+    font-style: italic;
+  }
+  .thin-text {
+    color: #ddd;
+    font-style: italic;
+  }
+}
+.sidebar {
+  padding-top: 0;
+}
+.sidebar .author .author-img img {
+  width: auto;
+}
+.author-bio {
+  a {
+    color: #333;
+  }
+  .follower {
+    padding-right: 10px;
+    border-right: 1px solid #ddd;
+  }
+  .following {
+    padding-left: 10px;
+    border-left: 1px solid #ddd;
+  }
+}
+.stats {
+  a {
+    color: #333;
+  }
+  a:hover {
+    color: #337ab7;
+  }
+}
+.activity {
+  .pull-right {
+    color: #aaa;
+  }
+  .pull-right:hover {
+    color: #333;
+  }
+}
+.activity:hover .pull-right {
+  color: #333;
+}

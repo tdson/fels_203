@@ -50,6 +50,15 @@ en:
       txt_info: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.
         Nobis, possimus commodi, fugiat magnam temporibus vero mani recusandae?"
       btn_sign_up: "Sign Up Now"
+    home:
+      nothing: "Follow people to see what they do!"
+    daily_word:
+      header: "Daily Word"
+      no_data: "No data"
+    user_widget:
+      greeting_txt: "Welcome back"
+      follower: "Follower"
+      following: "Following"
   users:
     new:
       title: "Sign Up"
@@ -153,6 +162,15 @@ en:
       title: "Result"
       scores: "Scores:"
       total_time: "Total time:"
+    index:
+      user_not_found: "User not found!"
+      access_denied: "Access denied!"
+      title: "All Lessons Of %{user}"
+      header: "%{user}'s Lessons"
+      id: "#"
+      name: "Of Category"
+      time: "Started at"
+      results: "Results"
   relationships:
     fails: "Sorry, something went wrong, cannot follow/unfollow right now."
     cannot_follow: "Sorry, cannot follow this user!"
@@ -186,6 +204,12 @@ en:
     csv:
       word: "Word"
       meaning: "Meaning"
+  authentication:
+    create:
+      email_exists: "Your email is already in use! Please login or click Forgot
+        password if you don't remember."
+      warning: "Your current password is: %{pass},
+        please change it to make sure your account is secure."
   admin:
     search_holder: "Search"
     load_fails:
@@ -232,6 +256,8 @@ en:
       update:
         success: "Category updated!"
         fails: "Update unsuccessful!"
+      destroy:
+        cannot_delete: "Cannot delete this category!"
     users:
       index:
         title: "Users"
