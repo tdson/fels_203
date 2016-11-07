@@ -1,0 +1,34 @@
+<% provide :title, t(".title") %>
+<div class="wrapper">
+  <h1 class="text-center"><%= t ".header" %></h1>
+  <div class="col-md-8 col-md-offset-2 well">
+    <%= render "filter_form" %>
+  </div>
+  <div class="col-md-8 col-md-offset-2">
+    <div class="row download-section">
+      <strong>
+        <i class="fa fa-download"></i>
+        <%= t ".lb_download" %>
+        <span class="download-format">
+          <%= link_to words_path(category_id: params[:category_id],
+            condition: params[:condition], format: Settings.formats.csv),
+            class: "btn btn-xs btn-warning" do %>
+            <i class="fa fa-file-o"></i>
+            <%= t ".csv_format" %>
+          <% end %>
+        </span>
+        <span class="download-format">
+          <%= link_to words_path(category_id: params[:category_id],
+            condition: params[:condition], format: Settings.formats.excel),
+            class: "btn btn-xs btn-success" do %>
+            <i class="fa fa-file-excel-o"></i>
+            <%= t ".excel_format" %>
+          <% end %>
+        </span>
+      </strong>
+    </div>
+    <div class="row" id="word-table">
+      <%= render "word_table" %>
+    </div>
+  </div>
+</div>

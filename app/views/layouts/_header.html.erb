@@ -20,7 +20,7 @@
           <li><%= link_to t(".link_home"), guest_index_url %></li>
           <% if logged_in? %>
             <li><%= link_to t(".lesson"), categories_url %></li>
-            <li><%= link_to t(".link_word_list"), "#" %></li>
+            <li><%= link_to t(".link_word_list"), words_path %></li>
             <li><%= link_to t(".link_members"), users_path %></li>
             <li class="dropdown">
               <%= link_to current_user, class: "dropdown-toggle",

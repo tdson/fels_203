@@ -1,0 +1,30 @@
+<%= form_tag words_path, method: :get, id: :filter_word do %>
+  <div class="col-md-5 form-group">
+    <%= text_field_tag :q, params[:q], placeholder: t(".holder"),
+      class: "form-control" %>
+  </div>
+  <div class="col-md-5 form-group">
+    <%= hidden_field_tag :category_id, params[:category_id], id: "category_id" %>
+    <%= select_tag "category_id",
+      options_from_collection_for_select(@categories, :id, :name,
+      params[:category_id]), include_blank: t(".filter_all_cate"),
+      class: "selectpicker form-control" %>
+  </div>
+  <div class="col-md-2 form-group">
+    <%= button_tag type: :submit, class: "btn btn-primary form-control" do %>
+      <i class="fa fa-search"></i>
+      <%= t ".btn_submit" %>
+    <% end %>
+  </div>
+  <div class="col-md-12 form-group text-center">
+    <% Settings.word_filters.each do |key, value| %>
+      <span class="filter-item">
+        <%= label_tag key, class: "radio-inline" do %>
+          <%= radio_button_tag :condition, value,
+            checked = params[:condition] == value, id: key %>
+          <strong><%= value.titleize %></strong>
+        <% end %>
+      </span>
+    <% end %>
+  </div>
+<% end %>
