@@ -225,7 +225,6 @@ en:
         resource: "User"
     words:
       resource: "word"
-    words:
       index:
         title: "Words Library"
         header: "All Words"
@@ -247,6 +246,9 @@ en:
         content_placeholder: "Content"
         lb_option: "Meaning options:"
         btn_submit: "Add Word"
+        lb_option: "Options:"
+        btn_submit: "Add Word"
+        btn_save: "Save changes"
         link_add_more: "[+] Add more"
         link_remove: "remove"
         lb_is_correct: "is correct?"
@@ -265,6 +267,11 @@ en:
         lb_is_correct: "is correct?"
       create:
         success: "Added successfully!"
+      edit:
+        title: "Edit ~"
+        header: "Edit:"
+      update:
+        success: "Updated successfully!"
   validates:
     words:
       too_many_options: "too many options, maximum is 6."
