@@ -13,13 +13,13 @@ https://e-learning-sontd.herokuapp.com
 
 To get started with the app, after clone the repo:
 
-First, you need to copy `database.example.yml` and rename it:
+First, you'll need to copy `database.yml` to run the app, just copy and rename `config/database.example.yml`:
 
 ```
 mv /config/database.example.yml /config/database.yml
 ```
 
-Then, the application need gems:
+Then, the application needs gems:
 
 ```
 $ bundle install --without production
