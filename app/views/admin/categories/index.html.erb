@@ -1,0 +1,56 @@
+<% provide :title, t(".title") %>
+<% provide :button_text, t(".btn_submit") %>
+<div class="wrapper">
+  <%= render "admin/layouts/left_panel" %>
+  <div class="col-md-9 col-sm-12">
+    <h1 class="admin-header">
+      <%= t ".header" %>
+      <span class="pull-right">
+        <%= link_to "#", class: "btn btn-primary",
+          data: {toggle: "modal", target: "#new_category_modal"} do %>
+          <i class="fa fa-cloud-upload"></i>
+          <%= t ".btn_add_new" %>
+        <% end %>
+      </span>
+    </h1>
+    <div class="col-md-5 col-md-offset-7">
+      <%= form_tag admin_categories_path, method: :get, id: "admin_search",
+        class: "row" do %>
+        <%= render "admin/shared/search_form" %>
+      <% end %>
+    </div>
+    <table id="categories-data-table" class="table table-hover">
+      <thead>
+        <tr>
+          <th class="text-center"><%= t ".id" %></th>
+          <th class="text-center"><%= t ".name" %></th>
+          <th class="text-center"><%= t ".words" %></th>
+          <th class="text-center"><%= t ".image" %></th>
+          <th class="text-center"><%= t ".time" %></th>
+          <th class="text-center"><%= t ".option" %></th>
+        </tr>
+      </thead>
+      <tbody id="result_search">
+        <%= render "category" %>
+      </tbody>
+    </table>
+    <div class="pull-right" id="paginations">
+      <%= will_paginate %>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="new_category_modal" role="dialog">
+  <div class="modal-dialog modal-md">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title"><%= t ".modal_header" %></h4>
+      </div>
+      <div id="category_form">
+        <%= render "category_modal" %>
+      </div>
+    </div>
+  </div>
+</div>
+<%= javascript_include_tag "datatable", "data-turbolinks-track": true %>

@@ -1,0 +1,326 @@
+en:
+  hello: "Hello world"
+  time:
+    formats:
+      date_format: "%d-%m-%Y"
+      date_time_format: "%H:%m:%S %d-%m-%Y"
+  entities:
+    close: "&times;"
+  layouts:
+    application:
+      base_title: "E-Learning"
+    header:
+      logo_alt: "E-Learning"
+      link_home: "Home"
+      link_about: "About"
+      link_contact: "Contact"
+      link_sign_in: "Sign in"
+      link_data_toggle: "Data toggle"
+      link_word_list: "Word list"
+      link_members: "Members"
+      link_profile: "Profile"
+      link_settings: "Settings"
+      link_admin_cp: "Admin CP"
+      link_log_out: "Log out"
+      link_lesson: "Lesson"
+    footer:
+      copyright: "2016. Design and Developed by"
+      author_name: "Son Tran"
+    signin_modal:
+      header: "Sign In"
+      holder_email: "Email"
+      holder_password: "Password"
+      btn_sign_up: "Sign Up"
+      btn_sign_in: "Sign In"
+      lb_or: "Or"
+      btn_sign_in_fb: "Sign in with facebook account"
+      btn_sign_in_gp: "Sign in with Google+ account"
+      btn_sign_in_tw: "Sign in with Twitter account"
+      link_forget_password: "Forgot password?"
+  static_pages:
+    guest:
+      txt_welcome: "Well come to E-Learning System"
+      txt_greeting: "Are you ready to learn new words?"
+      btn_sign_in: "Sign In"
+      header_about: "About us"
+      txt_about: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        Error, adipisci voluptatum repudiandae, natus impedit repellat aut
+        officia illum at assumenda iusto reiciendis placeat. Temporibus, vero."
+      txt_sign_up: "So what do you think?"
+      txt_info: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        Nobis, possimus commodi, fugiat magnam temporibus vero mani recusandae?"
+      btn_sign_up: "Sign Up Now"
+    home:
+      nothing: "Follow people to see what they do!"
+    daily_word:
+      header: "Daily Word"
+      no_data: "No data"
+    user_widget:
+      greeting_txt: "Welcome back"
+      follower: "Follower"
+      following: "Following"
+  users:
+    new:
+      title: "Sign Up"
+    form:
+      header: "Sign Up"
+      btn_create: "Create my account"
+      btn_update: "Save changes"
+      lb_name: "full name"
+      lb_email: "email"
+      lb_password: "password"
+      lb_password_confirmation: "password confirmation"
+    create:
+      success: "Your account has been create successfully!"
+    index:
+      title: "Members"
+      header: "All Members"
+      warning_login: "Login to see member list!"
+    user:
+      join_date: "Join date:"
+    profile:
+      lesson_count: "lesson"
+      follower_count: "follower"
+      following_count: "following"
+      btn_follow: "Follow"
+      btn_unfollow: "Unfollow"
+      words_remembered: "%{number} words remembered"
+    show:
+      header_profile: "Profile"
+      link_edit: "Edit"
+      not_found_user: "User not found!"
+      not_found_user: "User not found!"
+    log_tabs:
+      header_activities: "Activities"
+      header_followers: "Followers"
+      header_following: "Following"
+      nothing: "Follow this user to see the activities."
+    follow:
+      btn_follow: "Follow"
+    unfollow:
+      btn_unfollow: "Unfollow"
+    load_fails: "User not found!"
+    edit:
+      title: "Setting Profile"
+      btn_submit: "Save changes"
+      header_left_block: "Update Information"
+      header_right_block: "Account Settings"
+      access_denied: "Access denied!"
+    info_form:
+      lb_name: "Name"
+      lb_avatar: "Avatar"
+      img_formats: "Only accept these formats: JPG/JPEG, PNG, GIF."
+      btn_submit: "Update"
+    settings_form:
+      lb_email: "Email"
+      lb_password_old: "Current password"
+      lb_password_new: "New password"
+      lb_password_conf: "Password confirmation"
+      lb_permission: "Permission"
+      lb_is_admin: "Administrator"
+      btn_submit: "Update"
+      infor_1: "Verify current password to change email or password."
+      infor_2: "Leave New password blank if you don't want to change."
+    update:
+      incorrect_password: "is incorrect."
+      success: "Updated information and setting successfully!"
+  shared:
+    error_messages:
+      message: "The form contains"
+      error: "error"
+    search_form:
+      holder: "Search..."
+      btn_submit: "Search"
+  sessions:
+    create:
+      log_in_fails: "Invalid email or password!"
+  application:
+    warning_login: "Please login to continue!"
+    logged_in_user:
+      warning_login: "Please login to continue!"
+  categories:
+    index:
+      title: "Lessons by category"
+      header: "Lessons by category"
+      warning_login: "Please log in to continue."
+    category:
+      btn_start: "Start"
+      confirm_message: "Press OK to start a lesson of \"%{category}\"."
+  lessons:
+    load_fails: "Category or lesson not found."
+    create:
+      fails: "Cannot start lesson, try later!"
+      not_enough_word: "Sorry, not enough words to start a lesson, try later!"
+    edit:
+      btn_submit: "Submit"
+      progress: "Progress:"
+      remaining_time: "Remaining time:"
+    update:
+      warning: "Something went wrong! Canot show your score right now."
+      fails: "Submit unsuccessful, try later!"
+    show:
+      title: "Result"
+      scores: "Scores:"
+      total_time: "Total time:"
+    index:
+      user_not_found: "User not found!"
+      access_denied: "Access denied!"
+      title: "All Lessons Of %{user}"
+      header: "%{user}'s Lessons"
+      id: "#"
+      name: "Of Category"
+      time: "Started at"
+      results: "Results"
+  relationships:
+    fails: "Sorry, something went wrong, cannot follow/unfollow right now."
+    cannot_follow: "Sorry, cannot follow this user!"
+    cannot_unfollow: "Sorry, cannot unfollow this user!"
+  activities:
+    header: "News Feed"
+    lesson: "lesson of"
+    time: "%{time} ago"
+    type_0: "started a new"
+    type_1: "finished a"
+    type_2: "followed"
+    type_3: "unfollowed"
+  words:
+    index:
+      title: "Word List"
+      header: "Word List"
+      lb_download: "Download:"
+      csv_format: CSV
+      excel_format: XLS
+      excel_h_word: "Word"
+      excel_h_meaning: "Meaning"
+    filter_form:
+      filter_all_cate: "All category"
+      holder: "Search word or category..."
+      btn_submit: Search
+    word_table:
+      no: "#"
+      word: "Word"
+      meaning: "Meaning"
+      category: "Category"
+    csv:
+      word: "Word"
+      meaning: "Meaning"
+  authentication:
+    create:
+      email_exists: "Your email is already in use! Please login or click Forgot
+        password if you don't remember."
+      warning: "Your current password is: %{pass},
+        please change it to make sure your account is secure."
+  admin:
+    search_holder: "Search"
+    load_fails:
+      category: "Category not found!"
+      user: "User not found!"
+      word: "Word not found!"
+    delete:
+      success: "%{resource} has been deleted!"
+      fails: "Delete %{resource} unsuccessful!"
+    delete_confirmation: "Delete %{resource} #%{number}?"
+    btn_edit_title: "Edit this %{resource}"
+    btn_delete_title: "Delete this %{resource}"
+    layouts:
+      left_panel:
+        header: "Managements"
+        categories: "Categories"
+        users: "Users"
+        words: "Words"
+    categories:
+      index:
+        title: "Categories"
+        header: "All Categories"
+        name: "Categories name"
+        words: "Total Words"
+        image: "Thumbnail"
+        time: "Time"
+        option: "Options"
+        btn_add_new: "Add Category"
+        id: "ID"
+        modal_header: "Add New Category"
+        btn_submit: "Create"
+      category_modal:
+        name_placeholder: "Category name"
+        lb_image: "Image: "
+        lb_name: "Name:"
+        img_formats: "Only accept these formats: JPG/JPEG, PNG, GIF."
+      create:
+        success: "Category created!"
+        fails: "Create unsuccessful, try later!"
+      edit:
+        btn_save: "Save changes"
+        title: "Edit %{category}"
+        header: "Edit category: %{name}"
+      update:
+        success: "Category updated!"
+        fails: "Update unsuccessful!"
+      destroy:
+        cannot_delete: "Cannot delete this category!"
+    users:
+      index:
+        title: "Users"
+        header: "All Users"
+        id: "ID"
+        name: "User Name"
+        email: "Email"
+        time: "Join Date"
+        option: "Options"
+        btn_add_new: "Add User"
+      destroy:
+        resource: "User"
+    words:
+      resource: "word"
+      index:
+        title: "Words Library"
+        header: "All Words"
+        filter: "Category"
+        btn_add_new: "Add Word"
+        id: "ID"
+        word: "Word"
+        category: "Category"
+        option: "Options"
+        time: "Last Update"
+        filter_all_cate: "-- Select a category --"
+        modal_header: "Add New Word"
+      word_modal:
+        title: "Add New Word"
+        header: "Add New Word"
+        lb_category: "Category:"
+        blank_category: "Select a category"
+        lb_content: "Word:"
+        content_placeholder: "Content"
+        lb_option: "Meaning options:"
+        btn_submit: "Add Word"
+        lb_option: "Options:"
+        btn_submit: "Add Word"
+        btn_save: "Save changes"
+        link_add_more: "[+] Add more"
+        link_remove: "remove"
+        lb_is_correct: "is correct?"
+      new:
+        title: "Add New Word"
+        header: "Add New Word"
+      word_form:
+        lb_category: "Category:"
+        blank_category: "Select a category"
+        lb_content: "Word:"
+        content_placeholder: "Content"
+        lb_option: "Options:"
+        btn_submit: "Add Word"
+        link_add_more: "[+] Add more"
+        link_remove: "remove"
+        lb_is_correct: "is correct?"
+      create:
+        success: "Added successfully!"
+      edit:
+        title: "Edit ~"
+        header: "Edit:"
+      update:
+        success: "Updated successfully!"
+  validates:
+    words:
+      too_many_options: "too many options, maximum is 6."
+      too_less_options: "too less options, at least 2."
+      too_many_correct_options: "requires 01 correct option."

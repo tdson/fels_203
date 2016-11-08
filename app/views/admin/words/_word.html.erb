@@ -1,0 +1,23 @@
+<% @words.each do |word| %>
+  <tr>
+    <td><%= word.id %></td>
+    <td><%= link_to word.content, edit_admin_word_path(word) %></td>
+    <td><%= word.category.name %></td>
+    <td><%= l word.updated_at, format: :date_time_format %></td>
+    <td class="text-center">
+      <%= link_to  edit_admin_word_path(word.id),
+        class: "btn btn-warning btn-xs btn-option",
+        title: t("admin.btn_edit_title",
+        resource: t("admin.words.resource")) do %>
+        <i class="fa fa-edit"></i>
+      <% end %>
+      <%= link_to admin_word_path(word.id), method: :delete,
+        class: "btn btn-danger btn-xs btn-option",
+        title: t("admin.btn_delete_title", resource: t("admin.words.resource")),
+        data: {confirm: t("admin.delete_confirmation",
+        resource: :word, number: word.id)} do %>
+        <i class="fa fa-trash"></i>
+      <% end %>
+    </td>
+  </tr>
+<% end %>

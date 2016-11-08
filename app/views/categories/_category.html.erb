@@ -1,0 +1,24 @@
+<div class="col-sm-4 col-xs-12">
+  <figure class="wow fadeInLeft animated portfolio-item"
+    data-wow-duration="500ms" data-wow-delay="0ms">
+    <div class="img-wrapper">
+      <%= image_tag category_image(category), class: "img-responsive",
+        alt: category.name, title: category.name %>
+      <div class="overlay" title="<%= category.name %>">
+        <div class="buttons">
+          <%= link_to t(".btn_start"), category_lessons_path(category.id),
+            method: :post, class: "fancybox", rel: "gallery",
+            data: {confirm: t(".confirm_message", category: category.name)} %>
+        </div>
+      </div>
+    </div>
+    <figcaption>
+      <h4>
+        <%= link_to category.name.first(Settings.limit_category_name),
+          category_lessons_path(category.id), method: :post, class: "fancybox",
+          data: {confirm: t(".confirm_message", category: category.name)},
+          rel: "gallery" %>
+      </h4>
+    </figcaption>
+  </figure>
+</div>

@@ -1,0 +1,34 @@
+<div class="left-block">
+  <%= link_to @user do %>
+    <%= avatar_for @user, size: Settings.avatar_large %>
+  <% end %>
+  <%= render "follow_form" %>
+</div>
+<div class="user_detail">
+  <h2><%= link_to @user.name, @user %></h2>
+  <h5 class="text-left"><%= @user.email %></h5>
+  <span>
+    <%= t ".join_date" %> <%= l @user.created_at, format: :date_format %>
+  </span>
+  <div class="stats">
+    <ul>
+      <li>
+        <%= link_to pluralize(@user_result_ids.count, t(".lesson_count")),
+          user_lessons_path(@user) %>
+      </li>
+      <li>
+        <%= link_to t(".words_remembered", number: @learned_words.count),
+          words_path(condition: Settings.word_filters[:remembered],
+          user_id: @user.id) %>
+      </li>
+      <li id="followers">
+        <%= link_to pluralize(@followers.size, t(".follower_count")),
+          "#tab_followers", data: {toggle: "tab"} %>
+      </li>
+      <li id="following">
+        <%= link_to pluralize(@following.size, t(".following_count")),
+          "#tab_following", data: {toggle: "tab"} %>
+      </li>
+    </ul>
+  </div>
+</div>

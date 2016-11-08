@@ -1,0 +1,47 @@
+<ul class="nav nav-tabs">
+  <li class="<%= active_tab params, 'activity_log' %>">
+    <%= link_to t(".header_activities"), "#tab_activities",
+      data: {toggle: "tab"} %>
+  </li>
+  <li class="<%= active_tab params, 'followers' %>">
+    <%= link_to t(".header_followers"), "#tab_followers",
+      data: {toggle: "tab"} %>
+  </li>
+  <li class="<%= active_tab params, 'following' %>">
+    <%= link_to t(".header_following"), "#tab_following",
+      data: {toggle: "tab"} %>
+  </li>
+</ul>
+<% if current_user.following?(@user) || current_user.is_user?(@user) %>
+  <div id="logTabContent" class="tab-content">
+    <div class="tab-pane fade active in" id="tab_activities">
+      <div class="tab-pane-body">
+        <%= render @activity_log %>
+      </div>
+      <div class="tab-pane-footer text-center">
+        <%= will_paginate @activity_log, param_name: :activity_log_p,
+          params: {tab: :activity_log} %>
+      </div>
+    </div>
+    <div class="tab-pane fade" id="tab_followers">
+      <div class="tab-pane-body">
+        <%= render partial: "shared/user", collection: @followers %>
+      </div>
+      <div class="tab-pane-footer text-center">
+        <%= will_paginate @followers, param_name: :followers_p,
+          params: {tab: :followers} %>
+      </div>
+    </div>
+    <div class="tab-pane fade" id="tab_following">
+      <div class="tab-pane-body">
+        <%= render partial: "shared/user", collection: @following %>
+      </div>
+      <div class="tab-pane-footer text-center">
+        <%= will_paginate @following, param_name: :following_p,
+          params: {tab: :following} %>
+      </div>
+    </div>
+  </div>
+<% else %>
+  <h5><%= t ".nothing" %></h5>
+<% end %>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= full_title yield :title %></title>
+    <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag "application", media: "all",
+      "data-turbolinks-track": true %>
+    <%= javascript_include_tag "application", "data-turbolinks-track": true %>
+    <%= render "layouts/shim" %>
+  </head>
+
+  <body>
+    <%= render "layouts/header" %>
+    <%= render "shared/common_messages" %>
+    <% if logged_in? %>
+      <div class="container main-content">
+        <%= yield %>
+      </div>
+    <% else %>
+      <%= yield %>
+      <%= render "layouts/signin_modal" %>
+    <% end %>
+    <%= render "layouts/footer" %>
+  </body>
+</html>

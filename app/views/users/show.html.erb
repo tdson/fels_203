@@ -1,0 +1,29 @@
+<div class="wrapper">
+  <% if @user %>
+    <% provide :title, @user.name %>
+    <div class="col-md-5">
+      <div class="panel panel-default sidebar-menu">
+        <div class="panel-heading">
+          <h3 class="panel-title">
+            <span><%= t ".header_profile" %></span>
+            <% if admin? || current_user?(@user) %>
+              <span class="pull-right">
+                <%= link_to t(".link_edit"), edit_user_path(@user) %>
+              </span>
+            <% end %>
+          </h3>
+        </div>
+        <div class="panel-body">
+          <%= render "profile" %>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-7" id="log-preview">
+      <%= render "log_tabs" %>
+    </div>
+  <% else %>
+    <div class="text-center">
+      <h2><%= t ".not_found_user" %></h2>
+    </div>
+  <% end %>
+</div>
